@@ -31,7 +31,7 @@ export default function TypePreview() {
               }}
             >
               <Link
-                to={`/types?highlight=${code}`}
+                to={`/types/${code}`}
                 className="block text-center p-4 rounded-2xl hover:bg-bg-off transition-all duration-300 group hover:shadow-md hover:-translate-y-1"
               >
                 <div
