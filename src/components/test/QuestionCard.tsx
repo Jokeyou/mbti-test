@@ -1,0 +1,68 @@
+import { motion, AnimatePresence } from 'framer-motion'
+import type { Question } from '../../data/questions'
+import { useT } from '../../utils/i18n'
+import LikertScale from './LikertScale'
+
+interface Props {
+  question: Question
+  selectedValue: number
+  onSelect: (value: number) => void
+  direction: 'forward' | 'backward'
+}
+
+export default function QuestionCard({
+  question,
+  selectedValue,
+  onSelect,
+  direction,
+}: Props) {
+  const { t } = useT()
+  const questionText = t(question.text, question.textEn)
+
+  const variants = {
+    enter: (dir: string) => ({
+      x: dir === 'forward' ? 120 : -120,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir: string) => ({
+      x: dir === 'forward' ? -120 : 120,
+      opacity: 0,
+    }),
+  }
+
+  return (
+    <div className="max-w-xl mx-auto px-4 w-full">
+      <AnimatePresence mode="wait" custom={direction}>
+        <motion.div
+          key={question.id}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+        >
+          {/* Glass card container */}
+          <div className="bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg shadow-black/5 rounded-3xl p-8 md:p-10">
+            <h2 className="text-xl md:text-2xl font-semibold text-center text-text leading-relaxed min-h-[80px] flex items-center justify-center">
+              {questionText}
+            </h2>
+
+            <LikertScale value={selectedValue} onChange={onSelect} />
+          </div>
+
+          <p className="mt-6 text-center text-xs text-text-muted">
+            {t(
+              '按键盘 1-5 选择 · ← → 切换题目',
+              'Press 1-5 to select · ← → to navigate',
+            )}
+          </p>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  )
+}
