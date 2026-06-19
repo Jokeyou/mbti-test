@@ -7,7 +7,7 @@ export default function LanguageToggle() {
   const setLang = useTestStore((s) => s.setLang)
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex gap-1 bg-white/90 backdrop-blur rounded-full p-1 shadow-md border border-border">
+    <div className="flex gap-1 bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-full p-1 shadow-md border border-border">
       {(['zh', 'en'] as Lang[]).map((l) => {
         const isActive = lang === l
         return (

@@ -47,7 +47,7 @@ export default function QuestionCard({
           transition={{ duration: 0.25, ease: 'easeInOut' }}
         >
           {/* Glass card container */}
-          <div className="bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg shadow-black/5 rounded-3xl p-8 md:p-10">
+          <div className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/40 dark:border-slate-700/40 shadow-lg shadow-black/5 dark:shadow-black/20 rounded-3xl p-8 md:p-10">
             <h2 className="text-xl md:text-2xl font-semibold text-center text-text leading-relaxed min-h-[80px] flex items-center justify-center">
               {questionText}
             </h2>

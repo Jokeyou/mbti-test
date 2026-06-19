@@ -25,7 +25,7 @@ export default function DimensionBars({ scores }: Props) {
                 {lang === 'zh' ? s.rightLabel : s.rightLabel.replace(/[^A-Z]/g, '')}
               </span>
             </div>
-            <div className="h-2.5 bg-border rounded-full overflow-hidden flex">
+            <div className="h-2.5 bg-border dark:bg-slate-700 rounded-full overflow-hidden flex">
               <motion.div
                 className="h-full bg-primary-lighter rounded-l-full"
                 initial={{ width: 0 }}

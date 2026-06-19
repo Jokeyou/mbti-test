@@ -4,6 +4,8 @@ import { dimensions } from '../data/dimensions'
 import { calculateResult, type TestResult } from '../utils/scoring'
 import type { Lang } from '../utils/i18n'
 
+export type ThemeMode = 'system' | 'light' | 'dark'
+
 function getInitialLang(): Lang {
   try {
     const stored = localStorage.getItem('mbti-lang')
@@ -12,11 +14,20 @@ function getInitialLang(): Lang {
   return 'zh'
 }
 
+function getInitialTheme(): ThemeMode {
+  try {
+    const stored = localStorage.getItem('mbti-theme')
+    if (stored === 'system' || stored === 'light' || stored === 'dark') return stored
+  } catch { /* noop */ }
+  return 'system'
+}
+
 interface TestState {
   answers: Record<number, number>
   currentIndex: number
   result: TestResult | null
   lang: Lang
+  theme: ThemeMode
 
   setAnswer: (questionId: number, value: number) => void
   goNext: () => void
@@ -25,6 +36,7 @@ interface TestState {
   computeResult: () => void
   reset: () => void
   setLang: (lang: Lang) => void
+  setTheme: (theme: ThemeMode) => void
 }
 
 export const useTestStore = create<TestState>((set, get) => ({
@@ -32,6 +44,7 @@ export const useTestStore = create<TestState>((set, get) => ({
   currentIndex: 0,
   result: null,
   lang: getInitialLang(),
+  theme: getInitialTheme(),
 
   setAnswer: (questionId, value) =>
     set((state) => ({ answers: { ...state.answers, [questionId]: value } })),
@@ -67,5 +80,10 @@ export const useTestStore = create<TestState>((set, get) => ({
   setLang: (lang) => {
     try { localStorage.setItem('mbti-lang', lang) } catch { /* noop */ }
     set({ lang })
+  },
+
+  setTheme: (theme) => {
+    try { localStorage.setItem('mbti-theme', theme) } catch { /* noop */ }
+    set({ theme })
   },
 }))

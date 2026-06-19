@@ -32,7 +32,7 @@ export default function TypePreview() {
             >
               <Link
                 to={`/types/${code}`}
-                className="block text-center p-4 rounded-2xl hover:bg-bg-off transition-all duration-300 group hover:shadow-md hover:-translate-y-1"
+                className="block text-center p-4 rounded-2xl hover:bg-bg-off dark:hover:bg-slate-800/50 transition-all duration-300 group hover:shadow-md hover:-translate-y-1"
               >
                 <div
                   className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg"

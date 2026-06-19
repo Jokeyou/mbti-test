@@ -114,7 +114,7 @@ export default function TypeDetailPage() {
             return (
               <div
                 key={dim.id}
-                className="p-4 rounded-2xl bg-white/60 border border-border"
+                className="p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 border border-border"
               >
                 <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
                   {t(dim.label, dim.labelEn)}
@@ -140,7 +140,7 @@ export default function TypeDetailPage() {
             {strengths.map((s) => (
               <li
                 key={s}
-                className="flex items-start gap-3 p-3 rounded-xl bg-green-50"
+                className="flex items-start gap-3 p-3 rounded-xl bg-green-50 dark:bg-green-900/20"
               >
                 <span className="text-green-500 mt-0.5 flex-shrink-0 text-lg">✓</span>
                 <span className="text-text-muted">{s}</span>
@@ -163,7 +163,7 @@ export default function TypeDetailPage() {
             {weaknesses.map((w) => (
               <li
                 key={w}
-                className="flex items-start gap-3 p-3 rounded-xl bg-orange-50"
+                className="flex items-start gap-3 p-3 rounded-xl bg-orange-50 dark:bg-orange-900/20"
               >
                 <span className="text-orange-400 mt-0.5 flex-shrink-0 text-lg">△</span>
                 <span className="text-text-muted">{w}</span>
@@ -186,7 +186,7 @@ export default function TypeDetailPage() {
             {careers.map((c) => (
               <span
                 key={c}
-                className="px-4 py-2 bg-primary/5 text-primary text-sm rounded-full font-medium"
+                className="px-4 py-2 bg-primary/10 dark:bg-primary/15 text-primary text-sm rounded-full font-medium"
               >
                 {c}
               </span>

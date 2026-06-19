@@ -21,7 +21,7 @@ export default function ProgressBar({ current, total, answeredCount }: Props) {
           {t('已答', 'Answered')} {pct}%
         </span>
       </div>
-      <div className="h-1.5 bg-border rounded-full overflow-hidden">
+      <div className="h-1.5 bg-border dark:bg-slate-700 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-primary-lighter rounded-full"
           initial={{ width: 0 }}

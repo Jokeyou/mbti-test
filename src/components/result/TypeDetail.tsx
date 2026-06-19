@@ -67,7 +67,7 @@ export default function TypeDetail({ type }: Props) {
           {careers.map((c) => (
             <span
               key={c}
-              className="px-3 py-1.5 bg-primary/5 text-primary text-sm rounded-full"
+              className="px-3 py-1.5 bg-primary/10 dark:bg-primary/15 text-primary text-sm rounded-full"
             >
               {c}
             </span>

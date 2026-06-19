@@ -33,7 +33,7 @@ export default function LikertScale({ value, onChange }: Props) {
               ${
                 isSelected
                   ? 'border-primary-lighter bg-primary-lighter/10 text-primary shadow-md shadow-primary-lighter/20'
-                  : 'border-border bg-white/60 hover:border-primary-lighter/40 hover:bg-white hover:shadow-sm text-text-muted hover:text-text'
+                  : 'border-border bg-white/60 dark:bg-slate-800/60 hover:border-primary-lighter/40 hover:bg-white dark:hover:bg-slate-700 hover:shadow-sm text-text-muted hover:text-text'
               }
             `}
             whileHover={{ y: -3, scale: 1.03 }}

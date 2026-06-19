@@ -11,12 +11,15 @@
   --color-border: #e2e8f0;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -25,4 +28,21 @@ html {
 
 #root {
   min-height: 100vh;
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-primary: #90cdf4;
+  --color-primary-light: #63b3ed;
+  --color-primary-lighter: #4299e1;
+  --color-bg: #0f172a;
+  --color-bg-off: #1e293b;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+}
+
+.dark body {
+  color: var(--color-text);
+  background: var(--color-bg);
 }

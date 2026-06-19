@@ -38,7 +38,7 @@ export default function TypesPage() {
                 <Card3D intensity={8}>
                   <Link
                     to={`/types/${code}`}
-                    className="block rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-all duration-500 group"
+                    className="block rounded-2xl overflow-hidden bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-all duration-500 group"
                     style={{ border: '2px solid transparent' }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = `${type.color}30`
