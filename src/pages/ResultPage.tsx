@@ -13,6 +13,7 @@ import FigureCard from '../components/result/FigureCard'
 import DefiningMoment from '../components/result/DefiningMoment'
 import SharePoster from '../components/result/SharePoster'
 import FeedbackSection from '../components/result/FeedbackSection'
+import CompatibilitySection from '../components/result/CompatibilitySection'
 import RevealOverlay from '../components/result/RevealOverlay'
 import FloatingParticles from '../components/result/FloatingParticles'
 import { figures } from '../data/figures'
@@ -118,6 +119,9 @@ export default function ResultPage() {
             <DefiningMoment figure={figures[result.typeCode]} />
           </>
         )}
+
+        {/* Compatibility */}
+        <CompatibilitySection typeCode={result.typeCode} />
 
         {/* Type detail */}
         <TypeDetail type={type} />

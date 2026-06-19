@@ -11,6 +11,7 @@ import FigureCard from '../components/result/FigureCard'
 import DefiningMoment from '../components/result/DefiningMoment'
 import { figures } from '../data/figures'
 import { getSymbolForType } from '../data/fourSymbols'
+import CompatibilitySection from '../components/result/CompatibilitySection'
 
 export default function TypeDetailPage() {
   const { code } = useParams<{ code: string }>()
@@ -211,6 +212,9 @@ export default function TypeDetailPage() {
             <DefiningMoment figure={figures[type.code]} />
           </>
         )}
+
+        {/* Compatibility */}
+        <CompatibilitySection typeCode={type.code} />
 
         {/* CTA */}
         <motion.div
