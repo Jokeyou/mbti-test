@@ -7,6 +7,8 @@ import { useT } from '../utils/i18n'
 import AnimatedPage from '../components/common/AnimatedPage'
 import Button from '../components/common/Button'
 import TypeAvatar from '../components/common/TypeAvatar'
+import FigureCard from '../components/result/FigureCard'
+import { figures } from '../data/figures'
 
 export default function TypeDetailPage() {
   const { code } = useParams<{ code: string }>()
@@ -193,6 +195,11 @@ export default function TypeDetailPage() {
             ))}
           </div>
         </motion.div>
+
+        {/* Historical figure */}
+        {type.code && figures[type.code] && (
+          <FigureCard figure={figures[type.code]} />
+        )}
 
         {/* CTA */}
         <motion.div

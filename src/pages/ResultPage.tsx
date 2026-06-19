@@ -9,8 +9,10 @@ import AnimatedPage from '../components/common/AnimatedPage'
 import Button from '../components/common/Button'
 import ResultHero from '../components/result/ResultHero'
 import TypeDetail from '../components/result/TypeDetail'
+import FigureCard from '../components/result/FigureCard'
 import SharePoster from '../components/result/SharePoster'
 import FloatingParticles from '../components/result/FloatingParticles'
+import { figures } from '../data/figures'
 
 export default function ResultPage() {
   const navigate = useNavigate()
@@ -99,6 +101,11 @@ export default function ResultPage() {
             </Button>
           </Link>
         </motion.div>
+
+        {/* Historical figure */}
+        {figures[result.typeCode] && (
+          <FigureCard figure={figures[result.typeCode]} />
+        )}
 
         {/* Type detail */}
         <TypeDetail type={type} />
