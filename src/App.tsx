@@ -9,6 +9,7 @@ import TestPage from './pages/TestPage'
 import ResultPage from './pages/ResultPage'
 import TypesPage from './pages/TypesPage'
 import TypeDetailPage from './pages/TypeDetailPage'
+import FigurePreview from './pages/FigurePreview'
 
 function ThemeManager() {
   const theme = useTestStore((s) => s.theme)
@@ -51,6 +52,7 @@ function App() {
           <Route path="/result" element={<ResultPage />} />
           <Route path="/types" element={<TypesPage />} />
           <Route path="/types/:code" element={<TypeDetailPage />} />
+          <Route path="/preview" element={<FigurePreview />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

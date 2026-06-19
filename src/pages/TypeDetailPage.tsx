@@ -8,6 +8,7 @@ import AnimatedPage from '../components/common/AnimatedPage'
 import Button from '../components/common/Button'
 import TypeAvatar from '../components/common/TypeAvatar'
 import FigureCard from '../components/result/FigureCard'
+import DefiningMoment from '../components/result/DefiningMoment'
 import { figures } from '../data/figures'
 
 export default function TypeDetailPage() {
@@ -198,7 +199,10 @@ export default function TypeDetailPage() {
 
         {/* Historical figure */}
         {type.code && figures[type.code] && (
-          <FigureCard figure={figures[type.code]} />
+          <>
+            <FigureCard figure={figures[type.code]} />
+            <DefiningMoment figure={figures[type.code]} />
+          </>
         )}
 
         {/* CTA */}

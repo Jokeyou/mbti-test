@@ -10,6 +10,18 @@ export interface HistoricalFigure {
   descriptionEn: string
   trait: string
   traitEn: string
+  story: {
+    title: string
+    titleEn: string
+    setting: string
+    settingEn: string
+    narrative: string
+    narrativeEn: string
+    bridge: string
+    bridgeEn: string
+  }
+  quote: string
+  quoteEn: string
 }
 
 export const figures: Record<string, HistoricalFigure> = {
@@ -27,6 +39,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Zhuge Liang is the perfect embodiment of the INTJ "Architect." While living in seclusion, he had already mapped out the geopolitical future of China — his "Longzhong Plan" charted the course for the Three Kingdoms era. After joining Liu Bei, he revolutionized governance, engineered military campaigns, and pursued his vision with the motto "give one\'s all until death." His foresight, meticulousness, and devotion to his ideals made "Sleeping Dragon" synonymous with strategic genius.',
     trait: '运筹帷幄 · 远见卓识',
     traitEn: 'Strategic foresight · Meticulous planning',
+    story: {
+      title: '空城计',
+      titleEn: 'The Empty Fort Strategy',
+      setting: '公元228年，街亭失守，司马懿率十五万大军直逼西城。诸葛亮身边只有两千五百名老弱残兵。',
+      settingEn: '228 CE. Jieting has fallen. Sima Yi approaches with 150,000 troops. Zhuge Liang has only 2,500 elderly and weakened soldiers in the city.',
+      narrative: '城楼上，一人、一琴、一炷香。城门大开，几个老兵在门口扫地，仿佛无事发生。司马懿兵临城下，看见诸葛亮焚香抚琴，琴声悠扬，毫无惧色。十五万大军停在城外，司马懿凝神听了一会儿，突然下令：「全军撤退。」他没有看到的是一个军事家在用一生积累的冷静和智慧，将对方的每一步都算准——他断定司马懿多疑，越是坦荡，越不敢进。一个人，一张琴，吓退十五万大军。军事史上最不可思议的心理战，背后是 INTJ 对局势的完全掌控和对敌人的深度理解。',
+      narrativeEn: 'On the city gate, one man, one zither, one stick of incense. The gates wide open. A few old soldiers sweep the ground as if nothing is happening. Sima Yi arrives with his army and sees Zhuge Liang playing the zither, calm and fearless. One hundred fifty thousand soldiers halt outside the city. Sima Yi listens for a moment, then suddenly orders: "Full retreat." What he couldn\'t see was a strategist who had calculated every move — knowing Sima Yi was paranoid, knowing that complete openness would appear as the most dangerous trap. One man. One zither. One hundred fifty thousand troops turned away. The most incredible psychological warfare in military history.',
+      bridge: '像诸葛亮一样，你的 INTJ 特质意味着在最危险的时刻，你是团队中最冷静的那个人。别人看到危机，你看到解法。别人惊慌失措，你已经在计算三步之后。这就是「建筑师」的力量——不是蛮力，而是看透一切局势的智慧和定力。',
+      bridgeEn: 'Like Zhuge Liang, your INTJ nature means you\'re the calmest person in the room when everything falls apart. Others see chaos — you see the solution forming three steps ahead. That\'s the power of the Architect — not brute force, but the wisdom to see through any situation.',
+    },
+    quote: '鞠躬尽瘁，死而后已。',
+    quoteEn: 'I will give my all until my last breath.',
   },
   INTP: {
     mbti: 'INTP',
@@ -42,6 +66,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Laozi is the ancient archetype of the INTP "Logician." Before riding his water buffalo beyond the pass, he left behind the five-thousand-character Tao Te Ching — building an abstract philosophical system centered on the concept of "Tao." He retreated from society to think independently, using the most concise language to explore the nature of the universe, the limits of knowledge, and the philosophy of governance. Two millennia later, his ideas still provoke thought and debate worldwide.',
     trait: '深邃思辨 · 大道至简',
     traitEn: 'Profound inquiry · Profound simplicity',
+    story: {
+      title: '函谷关著书',
+      titleEn: 'The Book at the Pass',
+      setting: '约公元前5世纪，老子决定离开周王室，骑青牛西行。函谷关的守将尹喜拦住了他。',
+      settingEn: 'c. 5th century BCE. Laozi decides to leave the Zhou court and journey west on his water buffalo. At Hangu Pass, the guard Yin Xi stops him.',
+      narrative: '尹喜望见紫气东来，知道有大智慧者将至。他拦住老子说：「您就要隐退了，请为我们留下些什么吧。」老子本不想写——他相信「知者不言，言者不知」。但在尹喜的恳求下，他在关口停留了三天，挥笔写下五千言，然后骑青牛出关，从此消失在历史中。这五千字就是《道德经》——人类思想史上最精炼的哲学著作。一个不愿被打扰的思考者，被逼着留下了一部影响世界两千年、翻译量仅次于《圣经》的奇书。INTP 就是这样——表面上淡泊退隐，内心却藏着足以改变世界的思想。',
+      narrativeEn: 'Yin Xi saw a purple aura rising from the east and knew a great sage was approaching. He stopped Laozi: "You are about to retire from the world. Please leave something behind for us." Laozi never wanted to write — he believed "those who know do not speak, those who speak do not know." But at Yin Xi\'s urging, he stayed at the pass for three days, wrote five thousand characters, then rode his buffalo through the gate and vanished from history. Those five thousand characters became the Tao Te Ching — the most concise philosophical work in human history. A thinker who wanted only to be left alone was persuaded to leave behind a book that has influenced the world for two millennia, second only to the Bible in translations. That\'s the INTP way — outwardly detached, inwardly holding ideas powerful enough to change the world.',
+      bridge: '像老子一样，你的 INTP 特质意味着你不需要站在聚光灯下。你最好的想法往往在独处时诞生。当世界喧嚣时，你退后一步，看到更大的图景——然后用最简洁的方式，说出最深刻的道理。',
+      bridgeEn: 'Like Laozi, your INTP nature means you don\'t need the spotlight. Your best ideas emerge in solitude. When the world is noisy, you step back, see the bigger picture — then express the deepest truths in the simplest words.',
+    },
+    quote: '知者不言，言者不知。',
+    quoteEn: 'Those who know do not speak. Those who speak do not know.',
   },
   ENTJ: {
     mbti: 'ENTJ',
@@ -57,6 +93,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Qin Shi Huang is the ultimate expression of the ENTJ "Commander." He ended five centuries of warring states, unified China for the first time, standardized writing, currency, and measurements. He built the Great Wall, dug canals, established prefectures — each a systems-engineering feat on a millennial scale. His decisiveness, ambition, and execution shaped the political landscape of China for the next two thousand years.',
     trait: '雄才大略 · 一统天下',
     traitEn: 'Bold vision · Unrivaled execution',
+    story: {
+      title: '泰山封禅',
+      titleEn: 'Ascending Mount Tai',
+      setting: '公元前219年，统一天下两年后，秦始皇登临泰山，举行封禅大典——这是中国历史上第一次有皇帝在此祭天。',
+      settingEn: '219 BCE. Two years after unifying China, Qin Shi Huang ascends Mount Tai to perform the Fengshan ceremony — the first emperor in Chinese history to offer sacrifices to heaven from this sacred peak.',
+      narrative: '泰山之巅，风吹动帝袍。脚下是刚统一两年的帝国——北起辽东、南至象郡、西到临洮、东及大海。这个曾经的秦王，用十年时间结束了五百年战国纷争。他在泰山顶上刻下石碑：「六国回辟，贪戾无厌，虐杀不已。皇帝哀众，遂发讨师，奋扬武德。」翻译过来就是：你们六个国家打来打去，老百姓受苦了——我来结束这一切。他没有说「我征服了他们」，他说「我终结了战争」。ENTJ 的雄心从来不只是为了赢，而是为了建立一个新的秩序。',
+      narrativeEn: 'Atop Mount Tai, the wind billowed his imperial robes. Below him lay an empire unified just two years earlier — stretching from the Korean peninsula to Vietnam, from the Gobi to the sea. In ten years, the former King of Qin had ended five centuries of warfare. He inscribed on the stone tablet: "The six kingdoms were corrupt, greedy, and unrelenting in their cruelty. The Emperor, pitying the people, raised armies to spread righteous virtue." Translation: You six states have been fighting for centuries, and the people have suffered enough. I\'m ending this. He didn\'t say "I conquered them." He said "I ended the war." The ENTJ\'s ambition is never just about winning — it\'s about building a new order.',
+      bridge: '像秦始皇一样，你的 ENTJ 特质意味着你不能容忍混乱和低效。你看到的是全局，你制定的计划是改革性的。别人觉得你在追求权力，其实你追求的是把破碎的局面整合成一个能运转的系统。',
+      bridgeEn: 'Like Qin Shi Huang, your ENTJ nature means you can\'t tolerate chaos and inefficiency. You see the big picture and make transformative plans. Others think you\'re chasing power — actually, you\'re working to turn a broken situation into a system that actually works.',
+    },
+    quote: '六王毕，四海一。',
+    quoteEn: 'Six kingdoms fell. The realm became one.',
   },
   ENTP: {
     mbti: 'ENTP',
@@ -72,6 +120,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Zhuangzi is the highest expression of the ENTP "Debater." He dreamed he was a butterfly, debated "how do you know the fish are happy" with Hui Shi, and sang while drumming on a pot after his wife\'s death. He used parables and paradoxes to challenge every established framework of thought — his mind soared boundlessly yet remained profoundly coherent. He debated not to win, but to reveal the many facets of truth.',
     trait: '逍遥游心 · 妙辩无穷',
     traitEn: 'Boundless wit · Infinite curiosity',
+    story: {
+      title: '濠梁之辩',
+      titleEn: 'The Debate on the Bridge over the Hao',
+      setting: '战国时期的一个午后，庄子和惠施在濠水桥上散步，看见水中的鱼悠然游动。',
+      settingEn: 'A Warring States afternoon. Zhuangzi and his friend Hui Shi stroll across a bridge over the Hao River, watching fish swim leisurely beneath.',
+      narrative: '庄子说：「你看这些鱼，游得多自在——这就是鱼的快乐啊！」惠施立刻反驳：「你不是鱼，你怎么知道鱼快乐？」庄子笑了：「你不是我，你怎么知道我不知道鱼快乐？」惠施以为抓住了逻辑漏洞：「好，既然你承认我不是你、所以不知道你，那你不是鱼、也不知道鱼快乐——你输了。」庄子却悠悠地说：「让我们回到开头——你问我『你怎么知道鱼快乐』，这个问题本身就意味着你已经承认我知道了，你只是问我是从哪知道的。我告诉你吧：我站在桥上知道的。」这不是狡辩。庄子的意思是：知识不只有逻辑这一条路。直觉、感受、与世界的共鸣——这些也是认知的方式。两千三百年后，哲学家们依然在讨论这段对话。它是人类思想史上关于认知边界最巧妙的辩论，没有之一。',
+      narrativeEn: 'Zhuangzi said: "Look how freely these fish swim — that is the happiness of fish!" Hui Shi immediately challenged: "You are not a fish. How do you know fish are happy?" Zhuangzi smiled: "You are not me. How do you know I don\'t know?" Hui Shi thought he had him cornered logically. But Zhuangzi replied calmly: "Let\'s go back to the beginning. You asked me *how* I know fish are happy — which means you already accept that I know. You\'re just asking where I know it from. I\'ll tell you: I know it standing on this bridge." This wasn\'t sophistry. Zhuangzi\'s point: knowledge doesn\'t only come through logic. Intuition, feeling, resonance with the world — these are also ways of knowing. Twenty-three centuries later, philosophers still debate this conversation. It remains the most ingenious debate about the boundaries of human knowledge ever recorded.',
+      bridge: '像庄子一样，你的 ENTP 特质意味着你天生就是思想边界的挑战者。你不是为了挑衅，而是因为你看到了每个问题都有另外的面。当别人在争论对错时，你已经跳到更高的维度问：「这个问题的前提对吗？」',
+      bridgeEn: 'Like Zhuangzi, your ENTP nature means you\'re a natural challenger of intellectual boundaries. You don\'t provoke for the sake of it — you see that every question has another dimension. While others argue right vs wrong, you\'ve already jumped to a higher plane: "Is the premise of this question even correct?"',
+    },
+    quote: '子非鱼，安知鱼之乐？',
+    quoteEn: 'You are not a fish — how do you know what makes a fish happy?',
   },
   INFJ: {
     mbti: 'INFJ',
@@ -87,6 +147,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Confucius is the ideal embodiment of the INFJ "Advocate." Carrying the vision of a harmonious world, he traveled through the states for fourteen years spreading his philosophy of benevolent governance. He taught according to each student\'s aptitude, regardless of their background — three thousand disciples, seventy-two sages. Unrecognized in his lifetime, his ideas have shaped East Asian civilization for two millennia. His life proves that an idealist\'s influence can transcend time and space.',
     trait: '仁者爱人 · 万世师表',
     traitEn: 'Compassionate vision · Timeless wisdom',
+    story: {
+      title: '陈蔡之厄',
+      titleEn: 'The Siege of Chen and Cai',
+      setting: '公元前489年，孔子周游列国途中，被陈、蔡两国派兵围困在荒郊，断粮七日。弟子们饿得站不起来，但孔子依然弹琴唱歌。',
+      settingEn: '489 BCE. During his journey through the states, Confucius is besieged by soldiers from Chen and Cai in the wilderness. Cut off from food for seven days, his disciples grow too weak to stand — yet Confucius continues to play his zither and sing.',
+      narrative: '子路怒气冲冲地问：「君子也有穷困的时候吗？」孔子放下琴，平静地说：「君子固穷，小人穷斯滥矣。」——君子在困境中坚守原则，小人在困境中可以不择手段。然后他一个个叫来弟子，问了同一个问题：「不是犀牛也不是老虎，为什么我们被困在荒野上？」子路说「也许我们不够好」，子贡说「也许标准太高了」，只有颜回说：「夫子的理想太大，所以天下容不下。但正因天下容不下，才显出君子的本色。道既已修，不被接受是世人的损失，不是你的错。」孔子开心地笑了。七天断粮，最后被楚军救出。他一生没有实现政治理想，但他的教育理想改变了整个东亚文明。INFJ 就是这样——世界可能拒绝你的远见，那正是你坚持的必要。',
+      narrativeEn: 'Zilu asked angrily: "Does a gentleman also face such destitution?" Confucius put down his zither and said calmly: "A gentleman remains steadfast in hardship. A petty man loses all restraint." Then he called each disciple in turn, asking the same question: "We are neither rhinos nor tigers — why are we stranded in the wilderness?" Zilu said "maybe we\'re not good enough." Zigong said "maybe our standards are too high." Only Yan Hui answered: "Your vision is too vast for the world to contain. But precisely because the world cannot contain it, the gentleman\'s character is revealed. The Way has been cultivated — if it is not accepted, that is the world\'s loss, not your fault." Confucius beamed. Rescued after seven days, he never achieved his political ideals in his lifetime. But his educational vision transformed East Asian civilization. That\'s the INFJ — the world may reject your vision, and that is exactly why you must hold fast.',
+      bridge: '像孔子一样，你的 INFJ 特质意味着你可能常常感到孤独——你的视野比大多数人远，你的关心比大多数人深。但请不要降低你的标准。也许时代还没准备好接受你的想法，但那正是你的想法被需要的证明。',
+      bridgeEn: 'Like Confucius, your INFJ nature means you may often feel alone — you see further than most, you care deeper than most. Don\'t lower your standards. Maybe the world isn\'t ready for your ideas yet. That\'s exactly the proof that your ideas are needed.',
+    },
+    quote: '己所不欲，勿施于人。',
+    quoteEn: 'Do not do to others what you would not want done to yourself.',
   },
   INFP: {
     mbti: 'INFP',
@@ -102,6 +174,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Tao Yuanming is the literary incarnation of the INFP "Mediator." Refusing to "bow for five measures of rice," he resigned from office and returned to a life of picking chrysanthemums by the eastern fence and planting beans beneath the southern mountain. He wrote "Peach Blossom Spring," depicting an idyllic utopia hidden from the world — "fragrant grass fresh and beautiful, fallen petals in profusion." His inner world was rich and unwavering, using poetry to resist功利主义, finding purity in pastoral simplicity.',
     trait: '守拙归真 · 诗意栖居',
     traitEn: 'Authentic idealism · Poetic soul',
+    story: {
+      title: '不为五斗米折腰',
+      titleEn: 'Not Bending for Five Measures of Rice',
+      setting: '公元405年，陶渊明在彭泽当县令第83天。上级派督察来检查，县吏提醒他要穿戴整齐、恭敬迎接。',
+      settingEn: '405 CE. Day 83 of Tao Yuanming\'s tenure as magistrate of Pengze. A government inspector is visiting. The clerk reminds him to dress properly and greet the inspector with deference.',
+      narrative: '陶渊明沉默了片刻，说了一句话：「吾不能为五斗米折腰，拳拳事乡里小人邪！」——我不能为了五斗米的俸禄，对着这种小人点头哈腰。他当即解下官印，辞官归乡。从这一天起，中国文学史上诞生了一个全新的声音。他回到田园，在东篱下采菊花、在南山前种豆子。他写「采菊东篱下，悠然见南山」，写「久在樊笼里，复得返自然」。他创造了一个叫做「桃花源」的地方——那里的人「不知有汉，无论魏晋」，与世隔绝、和谐美好。一千年后，每一个疲惫的中国人，心中都还留着那片桃花源。INFP 就是这样——他们可能看起来在退缩，实际上是在为自己真正相信的生活方式划清底线。',
+      narrativeEn: 'Tao Yuanming paused for a moment, then said: "I cannot bend my waist for five measures of rice, bowing and scraping to a petty village official!" He removed his official seal and left. From this day forward, a completely new voice entered Chinese literature. He returned to his farm, picking chrysanthemums by the eastern hedge, planting beans beneath the southern mountain. He wrote "I pick chrysanthemums by the eastern fence, gazing lazily at the southern hills" and "Long have I been caged — now I return to nature." He created a place called "Peach Blossom Spring" — where people "know nothing of dynasties that rose and fell," living in peaceful isolation. A millennium later, every weary Chinese person still carries that Peach Blossom Spring in their heart. That\'s the INFP — they may appear to retreat, but they\'re actually drawing the firmest line for the kind of life they truly believe in.',
+      bridge: '像陶渊明一样，你的 INFP 特质意味着你内心深处有一道不可逾越的底线。你可能会为了追求理想而放弃现实利益，在别人看来这是不理智的。但你知道——守住内心的完整，比任何外界的成功都重要。',
+      bridgeEn: 'Like Tao Yuanming, your INFP nature means you have an unshakable line deep within your heart. You may give up real advantages for your ideals — others might call that irrational. But you know: preserving your inner integrity matters more than any external success.',
+    },
+    quote: '采菊东篱下，悠然见南山。',
+    quoteEn: 'Picking chrysanthemums by the eastern fence, I gaze lazily at the southern hills.',
   },
   ENFJ: {
     mbti: 'ENFJ',
@@ -117,6 +201,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Xuanzang is the faith-driven exemplar of the ENFJ "Protagonist." He journeyed alone for 50,000 li across 110 kingdoms over 17 years, bringing back 657 Buddhist scriptures from India. Returning home, he declined high office and spent 19 years translating 75 works at Ci\'en Temple. He taught, inspired, and single-handedly built a cultural bridge between China and India. The Monkey King and Pigsy in Journey to the West were escorting this real-life idealist.',
     trait: '普度众生 · 信念如磐',
     traitEn: 'Inspiring guide · Unshakeable faith',
+    story: {
+      title: '万里孤征',
+      titleEn: 'The Lone Journey of Ten Thousand Miles',
+      setting: '公元629年，玄奘从长安秘密出发。唐朝禁边，他混在难民中偷渡出境，开始了一场长达十七年、跨越五万里的旅程。',
+      settingEn: '629 CE. Xuanzang secretly departs Chang\'an. The Tang empire has closed its borders — he slips out among refugees, embarking on a seventeen-year, fifty-thousand-li journey.',
+      narrative: '穿越戈壁时他打翻了水囊，四天五夜滴水未进，几乎死在沙漠里。翻越帕米尔高原时，风雪如刀，同行者大半冻毙。在印度那烂陀寺，他一人舌战千僧，无人能驳倒他对佛法的理解。十七年后，他回到长安，带回六百五十七部梵文佛经。唐太宗为他建大慈恩寺，他拒绝了所有高官厚禄的邀请，关起门来，花了整整十九年翻译佛经。他翻译的《心经》，至今仍是两亿佛教徒日常诵读的经文。故事的结尾不是他，而是一个叫吴承恩的人，以他为原型写了《西游记》——让一个默默翻译经书的僧人，成为了中国人心中最浪漫的远行者。ENFJ 就是这样——他们不是为自己而存在，是为了一路上被他们改变的那些生命。',
+      narrativeEn: 'Crossing the Gobi Desert, he dropped his water pouch and went four days and five nights without water, nearly dying in the sands. Crossing the Pamir Plateau, wind and snow cut like knives — most of his companions froze to death. At Nalanda Monastery in India, he debated a thousand monks alone, and none could refute his understanding of Buddhist philosophy. Seventeen years later, he returned to Chang\'an with 657 Sanskrit scriptures. The emperor built the Great Ci\'en Temple for him. Xuanzang declined all offers of high office and spent nineteen years behind closed doors translating the scriptures. The Heart Sutra he translated is still recited daily by two hundred million Buddhists. The story doesn\'t end with him — a writer named Wu Cheng\'en made him the protagonist of Journey to the West, turning a quiet translator of scriptures into the most romantic traveler in Chinese imagination. That\'s the ENFJ — they don\'t exist for themselves, but for the countless lives they transform along the way.',
+      bridge: '像玄奘一样，你的 ENFJ 特质意味着你内心深处有一个无法熄灭的信念。你的人生旅途不只是为了你自己的成长——你每走一步，都在影响和激励着身边的人。你天生就是一个引路人。',
+      bridgeEn: 'Like Xuanzang, your ENFJ nature means you carry an unquenchable conviction deep within. Your life journey isn\'t just about your own growth — every step you take influences and inspires those around you. You were born to be a guide.',
+    },
+    quote: '远绍如来，近光遗法。',
+    quoteEn: 'To carry forward the Buddha\'s light, to illuminate the path ahead.',
   },
   ENFP: {
     mbti: 'ENFP',
@@ -132,6 +228,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Li Bai is the personality representative of the ENFP "Campaigner." "Heaven has made us talents — we\'re not made in vain. A thousand gold coins spent, more will come again." He rode white deer through famous mountains, produced a hundred poems per gallon of wine. His imagination soared like a giant roc for ninety thousand miles, his warmth and romance infecting every poet of his era. Unrestrained by rules, pursuing ultimate freedom — a soul this bright shines in any age.',
     trait: '天生我才 · 纵情浪漫',
     traitEn: 'Boundless passion · Creative genius',
+    story: {
+      title: '力士脱靴',
+      titleEn: 'Making the Chief Eunuch Remove His Boots',
+      setting: '公元742年，李白被唐玄宗召入长安，封为翰林待诏。一天，皇帝命他即兴赋诗，李白却已经喝得大醉。',
+      settingEn: '742 CE. Li Bai is summoned to the Tang court and appointed to the Hanlin Academy. One day, the emperor commands him to compose a poem on the spot — but Li Bai is already thoroughly drunk.',
+      narrative: '醉醺醺的李白被抬到皇帝面前。他看了一眼身旁的高力士——皇帝最宠信的宦官、权倾朝野的大人物——突然伸出脚说：「帮我把靴子脱了。」整个宫殿鸦雀无声。高力士愣住了。但在皇帝面前，他不得不弯下腰，给一个醉醺醺的诗人脱了靴子。然后李白提笔挥毫，三首《清平调》一气呵成：「云想衣裳花想容，春风拂槛露华浓。若非群玉山头见，会向瑶台月下逢。」皇帝看了大加赞赏，舞妓唱了这首词，杨贵妃亲自起舞。而李白呢？他丢下笔，摇摇晃晃地走出宫殿，骑上白鹿，继续他的名山之旅。这就是 ENFP——当所有人都在计算利弊得失时，他们跟着直觉走，把每一个当下的生命活成了诗。',
+      narrativeEn: 'Drunk, Li Bai was carried before the emperor. He glanced at Gao Lishi — the most powerful eunuch in the empire, a man who could make or break careers — and casually extended his foot: "Help me with my boots." The entire hall fell silent. Gao Lishi froze. But before the emperor, he had no choice. He bent down and removed the boots of a drunken poet. Then Li Bai picked up his brush, and three immortal poems poured out in a single breath: "Clouds think of her dress, flowers think of her face. Spring breeze sweeps the railing, dew glistens rich. If not seen atop the Mountain of Jade, Then met beneath the moon at the Jasper Terrace." The emperor was delighted. The court dancer sang his lyrics. The imperial consort Yang Guifei herself rose to dance. And Li Bai? He dropped his brush, staggered out of the palace, mounted his white deer, and continued his journey through the sacred mountains. That\'s the ENFP — while everyone else calculates pros and cons, they follow their intuition and turn every living moment into poetry.',
+      bridge: '像李白一样，你的 ENFP 特质意味着你不属于任何体制、任何规则、任何人对你的定义。你的热情就是你的才华——当别人被条条框框束缚时，你已经用创造力打开了一条全新的路。',
+      bridgeEn: 'Like Li Bai, your ENFP nature means you belong to no system, no set of rules, no one else\'s definition of you. Your passion is your talent — while others are trapped by conventions, you\'ve already carved a completely new path with your creativity.',
+    },
+    quote: '天生我材必有用，千金散尽还复来。',
+    quoteEn: 'Heaven has made us talents — we\'re not made in vain. A thousand gold coins spent, more will come again.',
   },
   ISTJ: {
     mbti: 'ISTJ',
@@ -147,6 +255,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Bao Zheng is the perfect standard of the ISTJ "Logistician." Impartial and unwavering, he applied the law equally to all — even imperial relatives. Over 26 years of public service, from county magistrate to vice minister, he remained meticulous and incorruptible. "Where connections fail, there is Old Bao the Judge of Hell" — the people believed that as long as Bao Zheng was there, order and justice would never be absent.',
     trait: '铁面无私 · 执法如山',
     traitEn: 'Incorruptible integrity · Steadfast duty',
+    story: {
+      title: '铡美案',
+      titleEn: 'The Case of Chen Shimei',
+      setting: '北宋年间，书生陈世美考中状元，抛弃了为他照顾父母多年的结发妻子秦香莲，还派人暗杀她和一双儿女灭口。秦香莲走投无路，告到了开封府包拯面前。',
+      settingEn: 'Northern Song Dynasty. The scholar Chen Shimei passes the imperial examination as top scholar, then abandons his wife Qin Xianglian — who had cared for his parents for years — and sends assassins to kill her and their two children. Desperate, Qin Xianglian brings her case to Judge Bao in Kaifeng.',
+      narrative: '包拯查明真相后，下令逮捕陈世美。但陈世美已是当朝驸马——太后和公主亲自到开封府说情。太后说：「包拯，这是皇家的事。」包拯跪在地上说：「太后，法理面前，没有皇亲。」太后怒了：「你敢动驸马，就是跟整个大宋皇族过不去！」包拯站起来，脱下乌纱帽放在桌上，平静地说了一句话：「铡了。」虎头铡落下。然后他将乌纱帽向前一推——「如果为一个人情而枉法，这顶官帽，不要也罢。」这就是 ISTJ——当整个世界都在逼你变通的时候，你选择了最孤独、也最正确的那条路。',
+      narrativeEn: 'After investigating, Bao Zheng ordered Chen Shimei\'s arrest. But Chen was now the emperor\'s son-in-law — the Empress Dowager and Princess personally came to intervene. The Empress Dowager said: "Bao Zheng, this is a royal matter." Bao knelt and replied: "Your Highness, before the law, there are no royal relatives." The Empress Dowager was furious: "If you touch the Prince Consort, you make an enemy of the entire Song imperial clan!" Bao Zheng stood up, removed his black official cap, placed it on the table, and said calmly: "Execute him." The executioner\'s blade fell. Then Bao pushed his cap forward — "If I bend the law for one favor, this office is not worth keeping." That\'s the ISTJ — when the entire world pressures you to compromise, you choose the loneliest path that is also the only right one.',
+      bridge: '像包拯一样，你的 ISTJ 特质意味着在所有人都想"通融一下"的时候，你是那个说"不"的人。你不需要所有人都理解你——你只需要对得起自己的原则。',
+      bridgeEn: 'Like Bao Zheng, your ISTJ nature means you\'re the one who says "no" when everyone else wants to "bend the rules just this once." You don\'t need everyone to understand you — you just need to stay true to your principles.',
+    },
+    quote: '关节不到，有阎罗包老。',
+    quoteEn: 'Where connections fail, there is Old Bao, the Judge of the Underworld.',
   },
   ISFJ: {
     mbti: 'ISFJ',
@@ -162,6 +282,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Hua Mulan is the heroic portrait of the ISFJ "Defender." She went to war not out of ambition, but out of devotion and protection for her aging father. After twelve years of battle, she asked for no reward — only to return home. "I take off my battle robe and put on my old dress." With the gentlest heart, she did the strongest thing: protect those she loved.',
     trait: '温柔刚强 · 守护家人',
     traitEn: 'Gentle strength · Quiet devotion',
+    story: {
+      title: '暮归女儿身',
+      titleEn: 'Returning Home at Dusk',
+      setting: '十二年的征战终于结束了。天子赏赐了百千财物，问她想要什么官职。花木兰说：「木兰不用尚书郎，愿驰千里足，送儿还故乡。」',
+      settingEn: 'Twelve years of war have finally ended. The Emperor offers riches and high office, asking what rank she desires. Hua Mulan answers: "Mulan has no need for the minister\'s post. Just give me a swift horse to carry me home to my hometown."',
+      narrative: '她骑着千里马回到家乡。父母互相搀扶着走出城来迎接。姐姐听说妹妹回来了，对着窗户梳妆打扮。弟弟听说姐姐回来了，磨刀霍霍准备杀猪宰羊。木兰推开自己的房门，脱下沾满十二年风沙的战袍，换上当年在家穿的旧衣裳。对着镜子，理好云鬓，贴上花黄——她变回了那个少女。出门见战友，所有人都呆住了。「同行十二年，不知木兰是女郎。」她没有要封赏，没有要官位，没有要任何东西——她做这一切从来不是为了名利。她只是为了父亲。只是为了家。ISFJ 最深沉的力量就在这里——她们的勇敢不是为了证明什么，而是为了守护心中最重要的人。',
+      narrativeEn: 'She rode home on a swift horse. Her aged parents, supporting each other, came out of the city to greet her. Her sister, hearing that little sister had returned, dressed up by the window. Her younger brother, hearing that big sister was back, sharpened the knife to butcher a pig and sheep. Mulan opened her door, took off the battle robe stained with twelve years of desert sand, and put on the dress she wore at home all those years ago. Before the mirror, she combed her hair and applied her yellow flower makeup — becoming the young woman once more. When she walked out to see her comrades in arms, every one of them was stunned. "We traveled together for twelve years and never knew Mulan was a woman." She asked for no reward, no rank, nothing — because she never did any of this for glory. She did it for her father. Only for her family. This is where the deepest strength of the ISFJ lies — their courage is never about proving anything. It\'s about protecting the people who matter most.',
+      bridge: '像花木兰一样，你的 ISFJ 特质意味着你不是人群中声音最大的人，但你做的永远比说的多。你的力量源于爱，你的勇敢源于守护。你不会去追逐聚光灯，但你撑起了身边每一个人最温暖的天空。',
+      bridgeEn: 'Like Hua Mulan, your ISFJ nature means you\'re not the loudest voice in the room — but you always do more than you say. Your strength comes from love. Your courage comes from protecting. You don\'t chase the spotlight, but you hold up the warmest sky for everyone around you.',
+    },
+    quote: '雄兔脚扑朔，雌兔眼迷离。双兔傍地走，安能辨我是雄雌？',
+    quoteEn: 'The male rabbit kicks and scampers, the female rabbit\'s eyes are soft and shy. But when they run side by side on the ground, who can tell which is he and which is she?',
   },
   ESTJ: {
     mbti: 'ESTJ',
@@ -177,6 +309,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Wu Zetian is the ultimate practitioner of the ESTJ "Executive." From concubine to empress to emperor, she spent 35 years systematically breaking every institutional barrier. She created the imperial examination\'s palace interview, promoted talent regardless of birth, and governed a peaceful and prosperous realm. The blank stele she left behind — "let future generations judge my deeds" — perfectly captures her pragmatism and confidence.',
     trait: '铁腕革新 · 务实高效',
     traitEn: 'Decisive reform · Pragmatic leadership',
+    story: {
+      title: '无字碑',
+      titleEn: 'The Blank Stele',
+      setting: '公元705年，武则天去世，葬于乾陵。她的陵墓前立着一块巨大的石碑——上面一个字都没有。',
+      settingEn: '705 CE. Wu Zetian passes away and is buried at Qianling Mausoleum. Before her tomb stands a massive stone stele — completely blank.',
+      narrative: '在中国两千年的帝制史中，她是唯一一个敢于称「皇帝」的女人。从一个十四岁的才人起步，她用三十五年时间走上权力的顶峰。她把科举制度从贵族垄断中解放出来，让寒门子弟有了上升通道。她发展农业、减轻赋税、整顿吏治，在她统治期间唐朝国泰民安。但她同样铁腕——凡是阻碍她的人都被清除。晚年，她留下遗诏，去帝号、称「则天大圣皇后」，与高宗合葬。然后——她给自己立了一块无字碑。没有任何功绩自述。没有任何辩解。她把这个评价的权力，留给了历史。一千年后，人们仍然在争论她是暴君还是明主。但没有人能否认：她让「女人不能当皇帝」这句话，从中国历史上彻底消失了。ESTJ 就是这样——他们不在乎你怎么评价他们，他们只在乎自己做了什么。',
+      narrativeEn: 'In two thousand years of Chinese imperial history, she was the only person who dared to call herself "Emperor" while being a woman. Starting as a fourteen-year-old junior concubine, she spent thirty-five years climbing to the peak of power. She broke the nobility\'s monopoly on the imperial examinations, giving talented commoners a path to rise. She developed agriculture, lowered taxes, and reformed the bureaucracy — under her reign, the Tang empire flourished. But she was also iron-fisted — anyone who stood in her way was removed. In her final years, she issued a decree: strip her imperial title, call her merely "Empress Zetian," and bury her alongside her husband. Then — she erected a blank stele. No self-praise carved in stone. No justifications. She left the judgment to history. A millennium later, people still debate whether she was a tyrant or a sage ruler. But no one can deny: she made the phrase "a woman cannot be emperor" vanish from Chinese history forever. That\'s the ESTJ — they don\'t care how you judge them. They care about what they built.',
+      bridge: '像武则天一样，你的 ESTJ 特质意味着你注定要打破规则和天花板。你的高效不是咄咄逼人——而是你知道什么是对的，并且有勇气把它执行到底。让结果说话。',
+      bridgeEn: 'Like Wu Zetian, your ESTJ nature means you\'re destined to break rules and shatter ceilings. Your efficiency isn\'t aggression — it\'s knowing what\'s right and having the courage to execute it all the way. Let the results speak.',
+    },
+    quote: '功过任人评说。',
+    quoteEn: 'Let future generations judge my deeds as they will.',
   },
   ESFJ: {
     mbti: 'ESFJ',
@@ -192,6 +336,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Su Shi is the warm exemplar of the ESFJ "Consul." Despite a life of repeated political exile, everywhere he went he built irrigation works, opened schools, and made friends. He invented Dongpo Pork and wrote "May we all be blessed with longevity, sharing the moon a thousand miles apart" — transforming hardship into poetry. He cared for everyone around him, from emperor to farmer, bringing people together in the most genuine way.',
     trait: '乐天知命 · 温暖众心',
     traitEn: 'Warm-hearted · Community builder',
+    story: {
+      title: '一蓑烟雨任平生',
+      titleEn: 'A Straw Cloak in the Mist and Rain',
+      setting: '公元1082年，苏轼被贬黄州的第三年。朋友们约他去沙湖买地，走到半路，天降大雨。所有人都狼狈奔逃，只有苏轼一个人不慌不忙，在雨中慢慢走。',
+      settingEn: '1082 CE. Su Shi\'s third year of exile in Huangzhou. Friends invite him to look at land near Sand Lake. Halfway there, a storm breaks. Everyone scrambles for shelter — except Su Shi, who walks calmly through the downpour.',
+      narrative: '他边走边吟出了那首千古绝唱：「莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜过马，谁怕？一蓑烟雨任平生。」——别去听雨水打穿树叶的声音，为什么不一边唱歌一边慢慢走呢？竹杖草鞋比骑马还轻快，怕什么？一件蓑衣，足够抵挡一辈子的风雨。这不是盲目的乐观主义。苏轼被贬了一辈子——黄州、惠州、儋州，一次比一次远。但每到一个地方，他就修水利、办学堂、交朋友。他发明了东坡肉，「黄州好猪肉，价贱如泥土」。他写「但愿人长久，千里共婵娟」。他把每一次人生低谷，都活成了诗、酒、美食和温暖的友谊。ESFJ 最动人的力量就在这里——他们不是没有经历过黑暗，而是他们在黑暗中依然选择为身边的人点一盏灯。',
+      narrativeEn: 'Walking through the rain, he composed an immortal verse: "Don\'t listen to the sound of rain piercing the leaves — why not sing as you walk slowly on? Bamboo staff and straw sandals are lighter than a horse — who\'s afraid? A straw cloak is enough for a lifetime of mist and rain." This wasn\'t blind optimism. Su Shi was exiled his entire life — Huangzhou, Huizhou, Danzhou, each further than the last. Yet everywhere he went, he built irrigation, opened schools, made friends. He invented Dongpo Pork: "In Huangzhou, good pork is cheap as mud." He wrote: "May we all be blessed with longevity, sharing the moon a thousand miles apart." He turned every low point in life into poetry, wine, good food, and warm friendship. This is the most moving power of the ESFJ — it\'s not that they\'ve never known darkness, but that in the darkness they still choose to light a lamp for those around them.',
+      bridge: '像苏轼一样，你的 ESFJ 特质意味着你有一种罕见的温暖——即使在最困难的处境下，你依然能让身边的人感到被关心、被照顾。你不是天生的乐观者，你是选择在风雨中为别人撑伞的人。这正是你最珍贵的地方。',
+      bridgeEn: 'Like Su Shi, your ESFJ nature means you possess a rare warmth — even in the hardest circumstances, you still make those around you feel cared for. You\'re not a natural optimist — you\'re someone who chooses to hold an umbrella for others in the rain. That\'s the most precious thing about you.',
+    },
+    quote: '但愿人长久，千里共婵娟。',
+    quoteEn: 'May we all be blessed with longevity, sharing the moon a thousand miles apart.',
   },
   ISTP: {
     mbti: 'ISTP',
@@ -207,6 +363,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Lu Ban is the archetypal ISTP "Virtuoso." He invented the saw, the ink line, the carpenter\'s square, the siege ladder, and countless woodworking tools — each one a real problem solved through hands-on experimentation. He thought with his hands and explored through action, never wasting time on empty theory. Two millennia later, builders still honor him as "Master Lu Ban" — the highest honor for a hands-on problem solver.',
     trait: '匠心独运 · 巧夺天工',
     traitEn: 'Master craftsman · Hands-on genius',
+    story: {
+      title: '造云梯',
+      titleEn: 'The Siege Ladder',
+      setting: '春秋时期，楚国准备攻打宋国。但宋国的城墙太高、防守太坚固。楚王听说鲁班是这个时代最厉害的工匠，便派人请他出山。',
+      settingEn: 'Spring and Autumn period. The State of Chu prepares to attack Song, but Song\'s city walls are too high and well-defended. The King of Chu hears of a legendary craftsman named Lu Ban and summons him.',
+      narrative: '鲁班到了楚国后，什么都没说，直接开始动手。他观察城墙的高度、兵器的射程、攻城的难点，然后在工棚里敲敲打打了几个月。有一天，他让楚王来看一件东西——那是一架可以折叠、伸缩、高达数丈的云梯。士兵可以藏在里面推到城墙下，然后展开梯子直接攀上城头。楚王大喜，立即下令批量制造。但鲁班在旁边说了一句话：「这个梯子能让你们登上城墙。但能不能攻下宋国——那是你们的事。」他是工匠，不是谋士。他不在乎战争的结果，他在乎的是问题本身：怎么登上一座看起来不可攀登的城墙？他用双手回答了这个问题。ISTP 就是这样——他们没有那么多话，但他们的双手可以解决世界上最实际的问题。',
+      narrativeEn: 'Once in Chu, Lu Ban said nothing and went straight to work. He observed the height of Song\'s walls, the range of weapons, the challenges of siege warfare. Then he spent months hammering in his workshop. One day, he showed the King of Chu what he had built — a foldable, extendable siege ladder reaching several stories high. Soldiers could hide inside and push it to the base of the wall, then deploy the ladder and scale the battlements directly. The King was delighted and immediately ordered mass production. But Lu Ban added: "This ladder can get your men onto the walls. Whether you can conquer Song — that\'s your business." He was a craftsman, not a strategist. He didn\'t care about the outcome of the war. He cared about the problem itself: how do you climb a wall that seems unclimbable? He answered with his hands. That\'s the ISTP — they don\'t have many words, but their hands can solve the most practical problems in the world.',
+      bridge: '像鲁班一样，你的 ISTP 特质意味着你不喜欢纸上谈兵。你相信实践出真知，相信双手比嘴巴更有说服力。当别人还在讨论方案的时候，你已经做了一个原型出来。这就是动手实干者的力量。',
+      bridgeEn: 'Like Lu Ban, your ISTP nature means you dislike empty theorizing. You believe real knowledge comes from doing — your hands are more persuasive than anyone\'s mouth. While others are still debating the approach, you\'ve already built a prototype. That\'s the power of the hands-on problem solver.',
+    },
+    quote: '工欲善其事，必先利其器。',
+    quoteEn: 'To do good work, one must first sharpen one\'s tools.',
   },
   ISFP: {
     mbti: 'ISFP',
@@ -222,6 +390,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Wang Xizhi is the artistic pinnacle of the ISFP "Adventurer." His "Preface to the Orchid Pavilion" is revered as the greatest piece of calligraphy in history — 324 characters, each stroke carrying subtle emotion and rhythm. Legend says he practiced by a pond until the water turned black with ink. He was not eloquent, nor did he seek power. He simply explored the boundaries of beauty with brush and ink, quietly becoming the unsurpassed peak of Chinese calligraphy.',
     trait: '笔墨传神 · 艺通千古',
     traitEn: 'Quiet artistry · Timeless beauty',
+    story: {
+      title: '兰亭雅集',
+      titleEn: 'The Orchid Pavilion Gathering',
+      setting: '公元353年三月初三，王羲之邀请了四十一位文人雅士，在会稽山阴的兰亭举行修禊之礼。清溪蜿蜒，酒杯顺流而下，停在谁面前谁就要赋诗一首。',
+      settingEn: 'The third day of the third month, 353 CE. Wang Xizhi invites forty-one literati to the Orchid Pavilion for the Spring Purification Festival. A winding stream carries cups of wine downstream — whoever the cup stops before must compose a poem.',
+      narrative: '那一天风和日丽，大家饮酒赋诗，收集了三十七首诗作。众人推举王羲之为诗集写一篇序。他略一沉吟，提起鼠须笔在蚕茧纸上挥毫。三百二十四个字，一气呵成。其中有二十个「之」字，每个写法都不同——有的像游龙，有的似惊鸿，有的轻如蝉翼，有的重如磐石。他写「仰观宇宙之大，俯察品类之盛」，写「后之视今，亦犹今之视昔」。那一刻他不是在「写字」，他是把整个宇宙和人生的感悟都注入了笔墨之中。这座兰亭序被后世称为「天下第一行书」——唐太宗临死前唯一放不下的就是它，命人带进昭陵陪葬。但王羲之本人呢？他对政治毫无兴趣，一生最爱的是鹅、是墨、是笔下流淌的美。ISFP 就是这样——他们不需要解释自己的艺术，因为最好的艺术不需要翻译。',
+      narrativeEn: 'That day, the weather was perfect. They drank, they composed, collecting thirty-seven poems in total. The group insisted Wang Xizhi write the preface. He paused briefly, then took up his brush of weasel hair and wrote on silkworm-cocoon paper. Three hundred twenty-four characters poured out in one breath. Among them, the character "之" (zhi) appeared twenty times — and every single one was written differently. Some like a swimming dragon, some like a startled swan, some light as cicada wings, some heavy as boulders. He wrote: "Looking up to behold the vastness of the universe, looking down to observe the abundance of all things," and "Future generations will look upon us just as we look upon the past." In that moment, he wasn\'t "writing characters" — he was pouring the entire universe and the meaning of life into brush and ink. The Orchid Pavilion Preface became known as the greatest piece of calligraphy in history. Emperor Taizong of Tang, on his deathbed, could not bear to part with it and ordered it buried with him. But Wang Xizhi himself? He had zero interest in politics. His greatest loves were geese, ink, and the beauty flowing from his brush. That\'s the ISFP — they don\'t need to explain their art, because the best art needs no translation.',
+      bridge: '像王羲之一样，你的 ISFP 特质意味着你用感受而不是语言与世界对话。你的美感和直觉是别人学不来的天赋。你不争抢、不喧哗，但你创造的东西，几千年后依然让人惊叹。',
+      bridgeEn: 'Like Wang Xizhi, your ISFP nature means you converse with the world through feeling rather than words. Your aesthetic sense and intuition are gifts others can\'t learn. You don\'t compete or make noise, but what you create still amazes people millennia later.',
+    },
+    quote: '后之视今，亦犹今之视昔。',
+    quoteEn: 'The future will look upon us just as we look upon the past.',
   },
   ESTP: {
     mbti: 'ESTP',
@@ -237,6 +417,18 @@ export const figures: Record<string, HistoricalFigure> = {
       'Guan Yu is the legendary embodiment of the ESTP "Entrepreneur." He attended a meeting alone with only his blade, fought through five passes and slew six generals, defeated Hua Xiong while his wine was still warm — every story a masterclass in decisive action. On the battlefield he was lightning-fast and fearless, never backing down from any enemy. Later generations deified him as "Saint Guan" — merchants pray to him for success, warriors for victory — because he represents action, decisiveness, and unwavering loyalty.',
     trait: '忠肝义胆 · 行动如电',
     traitEn: 'Fearless action · Unwavering loyalty',
+    story: {
+      title: '温酒斩华雄',
+      titleEn: 'Warm Wine Kills Hua Xiong',
+      setting: '公元190年，十八路诸侯讨伐董卓，被董卓的大将华雄连斩数将。大帐内，众诸侯一筹莫展。一个红脸长髯的大汉从刘备身后站了出来，说他去。',
+      settingEn: '190 CE. Eighteen warlords have allied against the tyrant Dong Zhuo, but his general Hua Xiong has already slain several of their best warriors. In the command tent, the warlords are at a loss. A tall man with a red face and flowing beard steps out from behind Liu Bei and says he\'ll go.',
+      narrative: '盟主袁绍问他是谁。他说：「关羽，字云长。马弓手。」满座大笑——一个弓箭手也敢去？曹操站起身，倒了一杯热酒递过去：「壮士请饮此杯，权当壮行。」关羽看了那杯酒一眼，说了一句：「酒且斟下，某去便来。」他提青龙偃月刀翻身上马，飞驰出营。不到片刻，帐外马蹄声响。关羽下马，大步走进来，把一个东西扔在地上——华雄的人头。他拿起桌上那杯酒，一饮而尽。酒，还是温的。整个大帐鸦雀无声。这就是 ESTP——当所有人都在算胜算的时候，他们已经在战场上赢了回来。他们不讨论概率，他们创造结果。',
+      narrativeEn: 'The alliance leader Yuan Shao asked who he was. "Guan Yu, styled Yunchang. A horse archer." The tent erupted in laughter — a mere archer dares to challenge Hua Xiong? Cao Cao stood up, poured a cup of warm wine, and offered it: "Warrior, please drink this cup for your journey." Guan Yu glanced at the wine and said: "Pour it and set it aside. I\'ll be right back." He grabbed his Green Dragon Crescent Blade, mounted his horse, and galloped out of the camp. Moments later, hoofbeats sounded outside. Guan Yu dismounted, strode in, and threw something on the ground — Hua Xiong\'s head. He picked up the cup of wine on the table and drained it in one gulp. The wine was still warm. The entire tent was silent. That\'s the ESTP — while everyone else is calculating the odds, they\'ve already won on the battlefield. They don\'t discuss probabilities. They create outcomes.',
+      bridge: '像关羽一样，你的 ESTP 特质意味着你不喜欢等待「完美的时机」。你相信行动——果断的、迅速的行动——能解决大多数犹豫不决的人永远解决不了的问题。别人还在讨论的时候，你已经做完了。',
+      bridgeEn: 'Like Guan Yu, your ESTP nature means you don\'t wait for the "perfect moment." You believe in action — decisive, rapid action — which solves problems that indecisive people will never resolve. While others are still talking, you\'ve already finished.',
+    },
+    quote: '玉可碎而不可改其白，竹可焚而不可毁其节。',
+    quoteEn: 'Jade may be shattered but its whiteness remains. Bamboo may be burned but its integrity endures.',
   },
   ESFP: {
     mbti: 'ESFP',
@@ -252,5 +444,17 @@ export const figures: Record<string, HistoricalFigure> = {
       'Tang Yin (Tang Bohu) is the perfect expression of the ESFP "Entertainer." A master of poetry, painting, and calligraphy, he was the center of attention wherever he went. "Others laugh at me for being too crazy — I laugh at them for not seeing through it all." Even after his official career was shattered, he lived freely and joyfully. He painted, drank, and surrounded himself with friends, meeting fate\'s ups and downs with sheer delight — the ESFP gift of turning every moment into a celebration.',
     trait: '诗酒风流 · 洒脱人生',
     traitEn: 'Effervescent joy · Life as celebration',
+    story: {
+      title: '桃花庵歌',
+      titleEn: 'The Peach Blossom Cottage Song',
+      setting: '明弘治年间，唐伯虎在苏州阊门内筑了一座桃花庵。他的科举梦碎了——因卷入一场舞弊案，他被永远逐出了官场。但他决定用另一种方式度过余生。',
+      settingEn: 'Ming Dynasty, Hongzhi era. Tang Yin builds a Peach Blossom Cottage inside Suzhou\'s Changmen Gate. His dream of an official career is shattered — framed in an exam cheating scandal, he\'s forever barred from government. But he decides to spend the rest of his life another way.',
+      narrative: '他种了一院子桃树。花开时，他就坐在树下喝酒、画画、吟诗。他写下了那首《桃花庵歌》：「桃花坞里桃花庵，桃花庵下桃花仙。……别人笑我太疯癫，我笑他人看不穿。不见五陵豪杰墓，无花无酒锄作田。」翻译过来就是：你们都在追逐功名利禄，我在桃树下喝酒赏花。你们觉得我是疯子，我却觉得你们看不透人生。那些王侯将相的墓，现在都变成了农田——而我每一天都活得像个神仙。这首诗人人生前就在苏州的酒馆里流传，连街边的小孩都会背。唐伯虎不只是一个才子——他是一种生活方式的代表：在命运跟你开了最残酷的玩笑之后，仍然选择笑着活。ESFP 就是这样——他们不相信悲剧，因为任何悲剧都挡不住他们把今天过成庆典。',
+      narrativeEn: 'He planted a yard full of peach trees. When they bloomed, he sat beneath them — drinking, painting, composing poetry. He wrote the "Peach Blossom Cottage Song": "In the Peach Blossom Grove, a Peach Blossom Cottage. Beneath the Peach Blossom Cottage, a Peach Blossom Immortal... Others laugh at me for being too crazy. I laugh at them for not seeing through it all. Don\'t you see the tombs of heroes on the Five Hills? No flowers, no wine — now just farmland plowed." Translation: You\'re all chasing fame and fortune. I\'m here under the peach trees, drinking and watching flowers bloom. You think I\'m crazy. I think you haven\'t figured out what life is about. The tombs of all those kings and lords are now just farmland — but I live every day like an immortal. This poem spread through the taverns of Suzhou during his lifetime. Even street children could recite it. Tang Yin wasn\'t just a genius — he represented a way of life: after fate plays its cruelest joke on you, you still choose to live with joy. That\'s the ESFP — they don\'t believe in tragedy, because no tragedy can stop them from turning today into a celebration.',
+      bridge: '像唐伯虎一样，你的 ESFP 特质意味着你有一种罕见的生命力——无论生活给你多少打击，你依然能找到快乐的源泉。别人等待暴风雨过去，你在雨中跳舞。这就是你最感染人的地方。',
+      bridgeEn: 'Like Tang Yin, your ESFP nature means you possess a rare vitality — no matter how many blows life deals you, you still find wellsprings of joy. Others wait for the storm to pass. You dance in the rain. That\'s the most infectious thing about you.',
+    },
+    quote: '别人笑我太疯癫，我笑他人看不穿。',
+    quoteEn: 'Others laugh at me for being too crazy — I laugh at them for not seeing through it all.',
   },
 }

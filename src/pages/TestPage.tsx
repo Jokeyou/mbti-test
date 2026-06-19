@@ -1,6 +1,5 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { useTest } from '../hooks/useTest'
 import { questions } from '../data/questions'
 import { useT } from '../utils/i18n'
@@ -8,6 +7,10 @@ import AnimatedPage from '../components/common/AnimatedPage'
 import Button from '../components/common/Button'
 import ProgressBar from '../components/test/ProgressBar'
 import QuestionCard from '../components/test/QuestionCard'
+import GuardianShelves, { guardians as guardianList } from '../components/test/GuardianShelves'
+import GuardianUnlock from '../components/test/GuardianUnlock'
+import SurpriseToast from '../components/test/SurpriseToast'
+import { useTestStore } from '../store/testStore'
 
 export default function TestPage() {
   const navigate = useNavigate()
@@ -22,6 +25,22 @@ export default function TestPage() {
     goPrev,
     computeResult,
   } = useTest()
+  const guardians = useTestStore((s) => s.guardians)
+  const surpriseTrigger = useTestStore((s) => s.surpriseTrigger)
+  const lang = useTestStore((s) => s.lang)
+  const lastUnlocked = useTestStore((s) => s.lastUnlockedGuardian)
+  const clearLastUnlocked = useTestStore((s) => s.clearLastUnlockedGuardian)
+
+  // Guardian unlock detection — driven by store's lastUnlockedGuardian
+  const [newGuardian, setNewGuardian] = useState<typeof guardianList[0] | null>(null)
+
+  useEffect(() => {
+    if (!lastUnlocked) return
+    const guardian = guardianList.find((g) => g.dim === lastUnlocked)
+    if (guardian) {
+      setNewGuardian(guardian)
+    }
+  }, [lastUnlocked])
 
   const [animDir, setAnimDir] = useState<'forward' | 'backward'>('forward')
 
@@ -30,19 +49,19 @@ export default function TestPage() {
   const handleSelect = useCallback(
     (value: number) => {
       setAnswer(currentQuestion.id, value)
+      // Auto-advance after a brief delay
+      setTimeout(() => {
+        if (isLast) {
+          computeResult()
+          navigate('/result')
+        } else {
+          setAnimDir('forward')
+          goNext()
+        }
+      }, 200)
     },
-    [currentQuestion.id, setAnswer],
+    [currentQuestion.id, setAnswer, isLast, computeResult, navigate, goNext],
   )
-
-  const handleNext = useCallback(() => {
-    if (isLast) {
-      computeResult()
-      navigate('/result')
-      return
-    }
-    setAnimDir('forward')
-    goNext()
-  }, [isLast, computeResult, navigate, goNext])
 
   const handlePrev = useCallback(() => {
     setAnimDir('backward')
@@ -53,6 +72,15 @@ export default function TestPage() {
 
   return (
     <AnimatedPage className="min-h-screen flex flex-col">
+      <GuardianShelves unlocked={guardians} />
+      <SurpriseToast trigger={surpriseTrigger} lang={lang} />
+      <GuardianUnlock
+        guardian={newGuardian}
+        onDone={() => {
+          setNewGuardian(null)
+          clearLastUnlocked()
+        }}
+      />
       <div className="flex-1 max-w-2xl mx-auto w-full pt-8 md:pt-16 pb-8 flex flex-col">
         <ProgressBar
           current={progress.current}
@@ -79,24 +107,13 @@ export default function TestPage() {
             ← {t('上一题', 'Prev')}
           </Button>
 
-          <span className="text-sm text-text-muted">
-            {currentValue !== 0 ? t('已选择', 'Selected') : t('请选择', 'Choose')}
+          <span className="text-xs text-text-muted/50">
+            {t('点击选项自动进入下一题', 'Click an option to advance')}
           </span>
 
-          {isLast ? (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-            >
-              <Button onClick={handleNext}>
-                {allAnswered
-                  ? t('查看结果 →', 'View Results →')
-                  : t('完成测试 →', 'Finish Test →')}
-              </Button>
-            </motion.div>
-          ) : (
-            <Button variant="ghost" size="sm" onClick={handleNext}>
-              {t('下一题 →', 'Next →')}
+          {isLast && allAnswered && (
+            <Button onClick={() => { computeResult(); navigate('/result') }}>
+              {t('查看结果 →', 'View Results →')}
             </Button>
           )}
         </div>

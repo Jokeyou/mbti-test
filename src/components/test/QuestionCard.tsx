@@ -1,7 +1,15 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import type { Question } from '../../data/questions'
+import type { Question, Dimension } from '../../data/questions'
+import { dimensions } from '../../data/dimensions'
 import { useT } from '../../utils/i18n'
 import LikertScale from './LikertScale'
+
+const dimIcons: Record<Dimension, string> = {
+  EI: '⚡',
+  SN: '👁️',
+  TF: '🧠',
+  JP: '📋',
+}
 
 interface Props {
   question: Question
@@ -18,6 +26,9 @@ export default function QuestionCard({
 }: Props) {
   const { t } = useT()
   const questionText = t(question.text, question.textEn)
+  const dim = dimensions.find((d) => d.id === question.dimension)!
+  const dimLabel = t(dim.label, dim.labelEn)
+  const dimIcon = dimIcons[question.dimension]
 
   const variants = {
     enter: (dir: string) => ({
@@ -48,6 +59,14 @@ export default function QuestionCard({
         >
           {/* Glass card container */}
           <div className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/40 dark:border-slate-700/40 shadow-lg shadow-black/5 dark:shadow-black/20 rounded-3xl p-8 md:p-10">
+            {/* Dimension tag */}
+            <div className="text-center mb-5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary/5 dark:bg-primary/15 text-primary/70">
+                {dimIcon}
+                {dimLabel}
+              </span>
+            </div>
+
             <h2 className="text-xl md:text-2xl font-semibold text-center text-text leading-relaxed min-h-[80px] flex items-center justify-center">
               {questionText}
             </h2>

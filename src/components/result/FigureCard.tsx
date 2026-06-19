@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import type { HistoricalFigure } from '../../data/figures'
 import { useT } from '../../utils/i18n'
-import SealAvatar from '../common/SealAvatar'
+import FigureAvatar from '../common/FigureAvatar'
+import { personalityTypes } from '../../data/types'
 
 interface Props {
   figure: HistoricalFigure
@@ -9,6 +10,7 @@ interface Props {
 
 export default function FigureCard({ figure }: Props) {
   const { t } = useT()
+  const type = personalityTypes[figure.mbti]
   const name = t(figure.name, figure.nameEn)
   const title = t(figure.title, figure.titleEn)
   const era = t(figure.era, figure.eraEn)
@@ -32,14 +34,24 @@ export default function FigureCard({ figure }: Props) {
         <div className="flex flex-col sm:flex-row items-center gap-5">
           {/* Seal avatar */}
           <div className="flex-shrink-0">
-            <SealAvatar name={figure.name} size={80} />
+            <FigureAvatar name={figure.name} size={100} />
           </div>
 
           {/* Info */}
           <div className="flex-1 text-center sm:text-left">
-            <h3 className="text-xl md:text-2xl font-extrabold text-text">
-              {name}
-            </h3>
+            <div className="flex items-center gap-2 justify-center sm:justify-start">
+              <h3 className="text-xl md:text-2xl font-extrabold text-text">
+                {name}
+              </h3>
+              {type && (
+                <span
+                  className="text-xs font-bold px-2 py-0.5 rounded-md"
+                  style={{ backgroundColor: type.color + '20', color: type.color }}
+                >
+                  {figure.mbti}
+                </span>
+              )}
+            </div>
             <p className="text-sm text-text-muted mt-0.5">{title}</p>
             <p className="text-xs text-text-muted/70 mt-0.5">{era}</p>
             {/* Trait badge */}

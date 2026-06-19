@@ -30,6 +30,11 @@ html {
   min-height: 100vh;
 }
 
+.font-serif-sc {
+  font-family: 'Noto Serif SC', 'STSong', 'Songti SC', 'SimSun', 'Source Han Serif SC', serif;
+}
+
+
 /* Dark mode overrides */
 .dark {
   --color-primary: #90cdf4;

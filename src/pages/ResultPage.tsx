@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react'
+import { useRef, useState, useCallback } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTest } from '../hooks/useTest'
@@ -10,7 +10,10 @@ import Button from '../components/common/Button'
 import ResultHero from '../components/result/ResultHero'
 import TypeDetail from '../components/result/TypeDetail'
 import FigureCard from '../components/result/FigureCard'
+import DefiningMoment from '../components/result/DefiningMoment'
 import SharePoster from '../components/result/SharePoster'
+import FeedbackSection from '../components/result/FeedbackSection'
+import RevealOverlay from '../components/result/RevealOverlay'
 import FloatingParticles from '../components/result/FloatingParticles'
 import { figures } from '../data/figures'
 
@@ -19,6 +22,7 @@ export default function ResultPage() {
   const { t } = useT()
   const { result, reset } = useTest()
   const posterRef = useRef<HTMLDivElement>(null)
+  const [revealDone, setRevealDone] = useState(false)
 
   const handleDownload = useCallback(async () => {
     if (!posterRef.current || !result) return
@@ -66,6 +70,11 @@ export default function ResultPage() {
 
   return (
     <AnimatedPage className="min-h-screen pb-16 relative">
+      {/* Dramatic reveal */}
+      {!revealDone && (
+        <RevealOverlay result={result} onComplete={() => setRevealDone(true)} />
+      )}
+
       {/* Floating particles background */}
       <FloatingParticles color={type.color} />
 
@@ -104,11 +113,17 @@ export default function ResultPage() {
 
         {/* Historical figure */}
         {figures[result.typeCode] && (
-          <FigureCard figure={figures[result.typeCode]} />
+          <>
+            <FigureCard figure={figures[result.typeCode]} />
+            <DefiningMoment figure={figures[result.typeCode]} />
+          </>
         )}
 
         {/* Type detail */}
         <TypeDetail type={type} />
+
+        {/* Feedback */}
+        <FeedbackSection />
       </div>
 
       {/* Hidden poster for image generation */}
