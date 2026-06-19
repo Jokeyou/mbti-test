@@ -1,5 +1,6 @@
 import { create } from 'zustand'
-import { questions, type Dimension } from '../data/questions'
+import { questions as questions28, type Dimension } from '../data/questions'
+import { questions60 } from '../data/questions60'
 import { dimensions } from '../data/dimensions'
 import { calculateResult, type TestResult } from '../utils/scoring'
 import type { Lang } from '../utils/i18n'
@@ -28,6 +29,7 @@ interface TestState {
   result: TestResult | null
   lang: Lang
   theme: ThemeMode
+  questionSet: 'quick' | 'full'
   guardians: Dimension[]
   surpriseTrigger: number
   lastUnlockedGuardian: Dimension | null
@@ -40,7 +42,12 @@ interface TestState {
   reset: () => void
   setLang: (lang: Lang) => void
   setTheme: (theme: ThemeMode) => void
+  setQuestionSet: (q: 'quick' | 'full') => void
   clearLastUnlockedGuardian: () => void
+}
+
+function getActiveQuestions(mode: 'quick' | 'full') {
+  return mode === 'full' ? questions60 : questions28
 }
 
 export const useTestStore = create<TestState>((set, get) => ({
@@ -49,6 +56,7 @@ export const useTestStore = create<TestState>((set, get) => ({
   result: null,
   lang: getInitialLang(),
   theme: getInitialTheme(),
+  questionSet: 'quick',
   guardians: [],
   surpriseTrigger: 0,
   lastUnlockedGuardian: null,
@@ -57,16 +65,17 @@ export const useTestStore = create<TestState>((set, get) => ({
     set((state) => {
       const newAnswers = { ...state.answers, [questionId]: value }
       // Check for newly completed dimensions
+      const activeQs = getActiveQuestions(state.questionSet)
       const allDims: Dimension[] = ['EI', 'SN', 'TF', 'JP']
       const newGuardians = [...state.guardians]
-      let lastUnlocked: Dimension | null = null
+      let newUnlock: Dimension | null | undefined = undefined
       for (const dim of allDims) {
         if (!newGuardians.includes(dim)) {
-          const dimQuestions = questions.filter((q) => q.dimension === dim)
+          const dimQuestions = activeQs.filter((q) => q.dimension === dim)
           const allAnswered = dimQuestions.every((q) => newAnswers[q.id] != null)
           if (allAnswered) {
             newGuardians.push(dim)
-            lastUnlocked = dim
+            newUnlock = dim
           }
         }
       }
@@ -74,14 +83,15 @@ export const useTestStore = create<TestState>((set, get) => ({
         answers: newAnswers,
         guardians: newGuardians,
         surpriseTrigger: state.surpriseTrigger + 1,
-        lastUnlockedGuardian: lastUnlocked,
+        // Only override lastUnlockedGuardian when a new one is unlocked
+        ...(newUnlock != null ? { lastUnlockedGuardian: newUnlock } : {}),
       }
     })
   },
 
   goNext: () =>
     set((state) => ({
-      currentIndex: Math.min(state.currentIndex + 1, questions.length - 1),
+      currentIndex: Math.min(state.currentIndex + 1, getActiveQuestions(state.questionSet).length - 1),
     })),
 
   goPrev: () =>
@@ -90,13 +100,14 @@ export const useTestStore = create<TestState>((set, get) => ({
     })),
 
   goTo: (index) =>
-    set(() => ({
-      currentIndex: Math.max(0, Math.min(index, questions.length - 1)),
+    set((state) => ({
+      currentIndex: Math.max(0, Math.min(index, getActiveQuestions(state.questionSet).length - 1)),
     })),
 
   computeResult: () => {
-    const { answers } = get()
-    const result = calculateResult(questions, answers, dimensions)
+    const { answers, questionSet } = get()
+    const activeQs = getActiveQuestions(questionSet)
+    const result = calculateResult(activeQs, answers, dimensions)
     set({ result })
   },
 
@@ -119,6 +130,8 @@ export const useTestStore = create<TestState>((set, get) => ({
     try { localStorage.setItem('mbti-theme', theme) } catch { /* noop */ }
     set({ theme })
   },
+
+  setQuestionSet: (q) => set({ questionSet: q }),
 
   clearLastUnlockedGuardian: () => set({ lastUnlockedGuardian: null }),
 }))

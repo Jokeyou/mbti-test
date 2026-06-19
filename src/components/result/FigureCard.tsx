@@ -59,6 +59,15 @@ export default function FigureCard({ figure }: Props) {
               <span className="text-lg">🏮</span>
               <span className="text-sm font-medium text-primary">{trait}</span>
             </div>
+            {/* Western counterpart */}
+            <p className="mt-2 text-xs text-text-muted/50">
+              {t('西方同型', 'Western counterpart')}:{' '}
+              <span className="text-text-muted/70 font-medium">
+                {t(figure.westernName, figure.westernNameEn)}
+              </span>
+              {' · '}
+              <span className="italic">{t(figure.westernTagline, figure.westernTaglineEn)}</span>
+            </p>
           </div>
         </div>
 

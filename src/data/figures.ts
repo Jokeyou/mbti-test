@@ -10,6 +10,10 @@ export interface HistoricalFigure {
   descriptionEn: string
   trait: string
   traitEn: string
+  westernName: string
+  westernNameEn: string
+  westernTagline: string
+  westernTaglineEn: string
   story: {
     title: string
     titleEn: string
@@ -39,6 +43,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Zhuge Liang is the perfect embodiment of the INTJ "Architect." While living in seclusion, he had already mapped out the geopolitical future of China — his "Longzhong Plan" charted the course for the Three Kingdoms era. After joining Liu Bei, he revolutionized governance, engineered military campaigns, and pursued his vision with the motto "give one\'s all until death." His foresight, meticulousness, and devotion to his ideals made "Sleeping Dragon" synonymous with strategic genius.',
     trait: '运筹帷幄 · 远见卓识',
     traitEn: 'Strategic foresight · Meticulous planning',
+    westernName: '尼古拉·特斯拉',
+    westernNameEn: 'Nikola Tesla',
+    westernTagline: '孤独的天才发明家，用头脑改变世界',
+    westernTaglineEn: 'Visionary inventor who reshaped the world with his mind',
     story: {
       title: '空城计',
       titleEn: 'The Empty Fort Strategy',
@@ -66,6 +74,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Laozi is the ancient archetype of the INTP "Logician." Before riding his water buffalo beyond the pass, he left behind the five-thousand-character Tao Te Ching — building an abstract philosophical system centered on the concept of "Tao." He retreated from society to think independently, using the most concise language to explore the nature of the universe, the limits of knowledge, and the philosophy of governance. Two millennia later, his ideas still provoke thought and debate worldwide.',
     trait: '深邃思辨 · 大道至简',
     traitEn: 'Profound inquiry · Profound simplicity',
+    westernName: '阿尔伯特·爱因斯坦',
+    westernNameEn: 'Albert Einstein',
+    westernTagline: '用纯粹的好奇心重塑了人类对宇宙的理解',
+    westernTaglineEn: 'Reshaped humanity\'s understanding of the universe through pure curiosity',
     story: {
       title: '函谷关著书',
       titleEn: 'The Book at the Pass',
@@ -93,6 +105,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Qin Shi Huang is the ultimate expression of the ENTJ "Commander." He ended five centuries of warring states, unified China for the first time, standardized writing, currency, and measurements. He built the Great Wall, dug canals, established prefectures — each a systems-engineering feat on a millennial scale. His decisiveness, ambition, and execution shaped the political landscape of China for the next two thousand years.',
     trait: '雄才大略 · 一统天下',
     traitEn: 'Bold vision · Unrivaled execution',
+    westernName: '尤利乌斯·凯撒',
+    westernNameEn: 'Julius Caesar',
+    westernTagline: '罗马的征服者，改变了西方历史的走向',
+    westernTaglineEn: 'Conqueror of Rome who changed the course of Western history',
     story: {
       title: '泰山封禅',
       titleEn: 'Ascending Mount Tai',
@@ -120,6 +136,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Zhuangzi is the highest expression of the ENTP "Debater." He dreamed he was a butterfly, debated "how do you know the fish are happy" with Hui Shi, and sang while drumming on a pot after his wife\'s death. He used parables and paradoxes to challenge every established framework of thought — his mind soared boundlessly yet remained profoundly coherent. He debated not to win, but to reveal the many facets of truth.',
     trait: '逍遥游心 · 妙辩无穷',
     traitEn: 'Boundless wit · Infinite curiosity',
+    westernName: '列奥纳多·达·芬奇',
+    westernNameEn: 'Leonardo da Vinci',
+    westernTagline: '文艺复兴全才，对一切充满永不满足的好奇',
+    westernTaglineEn: 'Renaissance polymath with insatiable curiosity about everything',
     story: {
       title: '濠梁之辩',
       titleEn: 'The Debate on the Bridge over the Hao',
@@ -147,6 +167,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Confucius is the ideal embodiment of the INFJ "Advocate." Carrying the vision of a harmonious world, he traveled through the states for fourteen years spreading his philosophy of benevolent governance. He taught according to each student\'s aptitude, regardless of their background — three thousand disciples, seventy-two sages. Unrecognized in his lifetime, his ideas have shaped East Asian civilization for two millennia. His life proves that an idealist\'s influence can transcend time and space.',
     trait: '仁者爱人 · 万世师表',
     traitEn: 'Compassionate vision · Timeless wisdom',
+    westernName: '马丁·路德·金',
+    westernNameEn: 'Martin Luther King Jr.',
+    westernTagline: '"我有一个梦想"——用非暴力改变了美国的灵魂',
+    westernTaglineEn: '"I Have a Dream" — changed America\'s soul through non-violence',
     story: {
       title: '陈蔡之厄',
       titleEn: 'The Siege of Chen and Cai',
@@ -174,6 +198,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Tao Yuanming is the literary incarnation of the INFP "Mediator." Refusing to "bow for five measures of rice," he resigned from office and returned to a life of picking chrysanthemums by the eastern fence and planting beans beneath the southern mountain. He wrote "Peach Blossom Spring," depicting an idyllic utopia hidden from the world — "fragrant grass fresh and beautiful, fallen petals in profusion." His inner world was rich and unwavering, using poetry to resist功利主义, finding purity in pastoral simplicity.',
     trait: '守拙归真 · 诗意栖居',
     traitEn: 'Authentic idealism · Poetic soul',
+    westernName: '文森特·梵高',
+    westernNameEn: 'Vincent van Gogh',
+    westernTagline: '用画笔燃烧灵魂，用色彩表达最纯粹的情感',
+    westernTaglineEn: 'Burned his soul onto canvas, expressing pure emotion through color',
     story: {
       title: '不为五斗米折腰',
       titleEn: 'Not Bending for Five Measures of Rice',
@@ -201,6 +229,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Xuanzang is the faith-driven exemplar of the ENFJ "Protagonist." He journeyed alone for 50,000 li across 110 kingdoms over 17 years, bringing back 657 Buddhist scriptures from India. Returning home, he declined high office and spent 19 years translating 75 works at Ci\'en Temple. He taught, inspired, and single-handedly built a cultural bridge between China and India. The Monkey King and Pigsy in Journey to the West were escorting this real-life idealist.',
     trait: '普度众生 · 信念如磐',
     traitEn: 'Inspiring guide · Unshakeable faith',
+    westernName: '纳尔逊·曼德拉',
+    westernNameEn: 'Nelson Mandela',
+    westernTagline: '27年牢狱后原谅敌人，团结了整个国家',
+    westernTaglineEn: 'Forgave his enemies after 27 years in prison and united a nation',
     story: {
       title: '万里孤征',
       titleEn: 'The Lone Journey of Ten Thousand Miles',
@@ -228,6 +260,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Li Bai is the personality representative of the ENFP "Campaigner." "Heaven has made us talents — we\'re not made in vain. A thousand gold coins spent, more will come again." He rode white deer through famous mountains, produced a hundred poems per gallon of wine. His imagination soared like a giant roc for ninety thousand miles, his warmth and romance infecting every poet of his era. Unrestrained by rules, pursuing ultimate freedom — a soul this bright shines in any age.',
     trait: '天生我才 · 纵情浪漫',
     traitEn: 'Boundless passion · Creative genius',
+    westernName: '罗宾·威廉姆斯',
+    westernNameEn: 'Robin Williams',
+    westernTagline: '用无穷的精力和才华让整个世界欢笑与落泪',
+    westernTaglineEn: 'Made the world laugh and cry with boundless energy and genius',
     story: {
       title: '力士脱靴',
       titleEn: 'Making the Chief Eunuch Remove His Boots',
@@ -255,6 +291,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Bao Zheng is the perfect standard of the ISTJ "Logistician." Impartial and unwavering, he applied the law equally to all — even imperial relatives. Over 26 years of public service, from county magistrate to vice minister, he remained meticulous and incorruptible. "Where connections fail, there is Old Bao the Judge of Hell" — the people believed that as long as Bao Zheng was there, order and justice would never be absent.',
     trait: '铁面无私 · 执法如山',
     traitEn: 'Incorruptible integrity · Steadfast duty',
+    westernName: '伊丽莎白二世',
+    westernNameEn: 'Queen Elizabeth II',
+    westernTagline: '一生恪尽职守，用沉默的坚持定义了君主制',
+    westernTaglineEn: 'Served with unwavering duty for seven decades of change',
     story: {
       title: '铡美案',
       titleEn: 'The Case of Chen Shimei',
@@ -282,6 +322,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Hua Mulan is the heroic portrait of the ISFJ "Defender." She went to war not out of ambition, but out of devotion and protection for her aging father. After twelve years of battle, she asked for no reward — only to return home. "I take off my battle robe and put on my old dress." With the gentlest heart, she did the strongest thing: protect those she loved.',
     trait: '温柔刚强 · 守护家人',
     traitEn: 'Gentle strength · Quiet devotion',
+    westernName: '弗洛伦斯·南丁格尔',
+    westernNameEn: 'Florence Nightingale',
+    westernTagline: '提灯女神，用温柔和坚韧开创了现代护理',
+    westernTaglineEn: 'The Lady with the Lamp — created modern nursing through compassion and grit',
     story: {
       title: '暮归女儿身',
       titleEn: 'Returning Home at Dusk',
@@ -309,6 +353,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Wu Zetian is the ultimate practitioner of the ESTJ "Executive." From concubine to empress to emperor, she spent 35 years systematically breaking every institutional barrier. She created the imperial examination\'s palace interview, promoted talent regardless of birth, and governed a peaceful and prosperous realm. The blank stele she left behind — "let future generations judge my deeds" — perfectly captures her pragmatism and confidence.',
     trait: '铁腕革新 · 务实高效',
     traitEn: 'Decisive reform · Pragmatic leadership',
+    westernName: '玛格丽特·撒切尔',
+    westernNameEn: 'Margaret Thatcher',
+    westernTagline: '铁娘子，用钢铁般的意志重塑了一个国家',
+    westernTaglineEn: 'The Iron Lady who reshaped a nation with an iron will',
     story: {
       title: '无字碑',
       titleEn: 'The Blank Stele',
@@ -336,6 +384,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Su Shi is the warm exemplar of the ESFJ "Consul." Despite a life of repeated political exile, everywhere he went he built irrigation works, opened schools, and made friends. He invented Dongpo Pork and wrote "May we all be blessed with longevity, sharing the moon a thousand miles apart" — transforming hardship into poetry. He cared for everyone around him, from emperor to farmer, bringing people together in the most genuine way.',
     trait: '乐天知命 · 温暖众心',
     traitEn: 'Warm-hearted · Community builder',
+    westernName: '奥普拉·温弗瑞',
+    westernNameEn: 'Oprah Winfrey',
+    westernTagline: '用真诚和温暖连接千万人，让每个普通人都感到被看见',
+    westernTaglineEn: 'Connected millions through genuine warmth, making every person feel seen',
     story: {
       title: '一蓑烟雨任平生',
       titleEn: 'A Straw Cloak in the Mist and Rain',
@@ -363,6 +415,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Lu Ban is the archetypal ISTP "Virtuoso." He invented the saw, the ink line, the carpenter\'s square, the siege ladder, and countless woodworking tools — each one a real problem solved through hands-on experimentation. He thought with his hands and explored through action, never wasting time on empty theory. Two millennia later, builders still honor him as "Master Lu Ban" — the highest honor for a hands-on problem solver.',
     trait: '匠心独运 · 巧夺天工',
     traitEn: 'Master craftsman · Hands-on genius',
+    westernName: '李小龙',
+    westernNameEn: 'Bruce Lee',
+    westernTagline: '武术哲学家，用身体和行动重新定义了格斗与电影',
+    westernTaglineEn: 'Martial arts philosopher who redefined combat and cinema through action',
     story: {
       title: '造云梯',
       titleEn: 'The Siege Ladder',
@@ -390,6 +446,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Wang Xizhi is the artistic pinnacle of the ISFP "Adventurer." His "Preface to the Orchid Pavilion" is revered as the greatest piece of calligraphy in history — 324 characters, each stroke carrying subtle emotion and rhythm. Legend says he practiced by a pond until the water turned black with ink. He was not eloquent, nor did he seek power. He simply explored the boundaries of beauty with brush and ink, quietly becoming the unsurpassed peak of Chinese calligraphy.',
     trait: '笔墨传神 · 艺通千古',
     traitEn: 'Quiet artistry · Timeless beauty',
+    westernName: '弗里达·卡罗',
+    westernNameEn: 'Frida Kahlo',
+    westernTagline: '用画笔将痛苦转化为惊艳世界的艺术作品',
+    westernTaglineEn: 'Turned her deepest pain into art that stunned the world',
     story: {
       title: '兰亭雅集',
       titleEn: 'The Orchid Pavilion Gathering',
@@ -417,6 +477,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Guan Yu is the legendary embodiment of the ESTP "Entrepreneur." He attended a meeting alone with only his blade, fought through five passes and slew six generals, defeated Hua Xiong while his wine was still warm — every story a masterclass in decisive action. On the battlefield he was lightning-fast and fearless, never backing down from any enemy. Later generations deified him as "Saint Guan" — merchants pray to him for success, warriors for victory — because he represents action, decisiveness, and unwavering loyalty.',
     trait: '忠肝义胆 · 行动如电',
     traitEn: 'Fearless action · Unwavering loyalty',
+    westernName: '温斯顿·丘吉尔',
+    westernNameEn: 'Winston Churchill',
+    westernTagline: '在至暗时刻挺身而出，用语言和行动拯救了英国',
+    westernTaglineEn: 'Rose in the darkest hour and saved Britain through words and action',
     story: {
       title: '温酒斩华雄',
       titleEn: 'Warm Wine Kills Hua Xiong',
@@ -444,6 +508,10 @@ export const figures: Record<string, HistoricalFigure> = {
       'Tang Yin (Tang Bohu) is the perfect expression of the ESFP "Entertainer." A master of poetry, painting, and calligraphy, he was the center of attention wherever he went. "Others laugh at me for being too crazy — I laugh at them for not seeing through it all." Even after his official career was shattered, he lived freely and joyfully. He painted, drank, and surrounded himself with friends, meeting fate\'s ups and downs with sheer delight — the ESFP gift of turning every moment into a celebration.',
     trait: '诗酒风流 · 洒脱人生',
     traitEn: 'Effervescent joy · Life as celebration',
+    westernName: '弗雷迪·默丘里',
+    westernNameEn: 'Freddie Mercury',
+    westernTagline: '摇滚史上最伟大的表演者，每一次登台都是一场狂欢',
+    westernTaglineEn: 'The greatest showman in rock history — every performance was a celebration',
     story: {
       title: '桃花庵歌',
       titleEn: 'The Peach Blossom Cottage Song',

@@ -19,7 +19,7 @@ export default function ProgressBar({ current, total, answeredCount }: Props) {
           {t('第', 'Q')} {current} / {total}
         </span>
         <span>
-          {t('已答', 'Answered')} {answeredCount}
+          {t('已答', 'Answered')} {answeredCount}/{total}
         </span>
       </div>
       <div className="h-1.5 bg-border dark:bg-slate-700 rounded-full overflow-hidden">

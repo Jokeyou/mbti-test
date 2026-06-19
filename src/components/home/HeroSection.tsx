@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useT } from '../../utils/i18n'
+import { useTestStore } from '../../store/testStore'
 import Button from '../common/Button'
 
 export default function HeroSection() {
   const { lang, t } = useT()
+  const setQuestionSet = useTestStore((s) => s.setQuestionSet)
+  const navigate = useNavigate()
+
+  const startTest = (mode: 'quick' | 'full') => {
+    setQuestionSet(mode)
+    navigate('/test')
+  }
 
   return (
     <section className="relative pt-24 pb-16 md:pt-36 md:pb-24 text-center px-4">
@@ -30,12 +38,13 @@ export default function HeroSection() {
             'MBTI Personality Test · 28 Questions · ~3 Minutes',
           )}
         </p>
-        <div className="mt-10">
-          <Link to="/test">
-            <Button size="lg">
-              {t('开始测试 · 3 分钟', 'Start Test · 3 min')}
-            </Button>
-          </Link>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Button size="lg" onClick={() => startTest('quick')}>
+            ⚡ {t('快速测试 · 28 题 · 3 分钟', 'Quick Test · 28 Q · 3 min')}
+          </Button>
+          <Button size="lg" variant="secondary" onClick={() => startTest('full')}>
+            🎯 {t('完整测试 · 60 题 · 8 分钟', 'Full Test · 60 Q · 8 min')}
+          </Button>
         </div>
         <p className="mt-4 text-sm text-text-muted">
           {t('完全免费 · 无需注册 · 结果实时呈现', 'Free · No sign-up · Instant results')}
