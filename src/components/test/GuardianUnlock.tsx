@@ -15,9 +15,9 @@ export default function GuardianUnlock({ guardian, onDone }: Props) {
   useEffect(() => {
     if (!guardian) return
     setStage('enter')
-    const t1 = setTimeout(() => setStage('celebrate'), 500)
-    const t2 = setTimeout(() => setStage('exit'), 3200)
-    const t3 = setTimeout(onDone, 3800)
+    const t1 = setTimeout(() => setStage('celebrate'), 400)
+    const t2 = setTimeout(() => setStage('exit'), 2200)
+    const t3 = setTimeout(onDone, 2600)
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
   }, [guardian, onDone])
 

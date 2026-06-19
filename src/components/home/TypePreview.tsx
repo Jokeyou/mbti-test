@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { personalityTypes } from '../../data/types'
 import { useT } from '../../utils/i18n'
+import { getSymbolForType } from '../../data/fourSymbols'
 import TypeAvatar from '../common/TypeAvatar'
 
 const typeOrder = Object.keys(personalityTypes)
@@ -18,6 +19,7 @@ export default function TypePreview() {
         {typeOrder.map((code, i) => {
           const type = personalityTypes[code]
           const typeName = t(type.name, type.nameEn)
+          const symbol = getSymbolForType(code)
           return (
             <motion.div
               key={code}
@@ -44,6 +46,7 @@ export default function TypePreview() {
                   <TypeAvatar code={code} size={56} />
                 </div>
                 <p className="mt-2.5 text-xs font-medium text-text-muted group-hover:text-text transition-colors">
+                  {symbol && <span className="mr-1">{symbol.emoji}</span>}
                   {typeName}
                 </p>
               </Link>

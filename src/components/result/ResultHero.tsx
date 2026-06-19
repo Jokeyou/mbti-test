@@ -4,6 +4,7 @@ import DimensionBars from './DimensionBars'
 import type { TestResult } from '../../utils/scoring'
 import type { PersonalityType } from '../../data/types'
 import { useT } from '../../utils/i18n'
+import { getSymbolForType } from '../../data/fourSymbols'
 
 interface Props {
   type: PersonalityType
@@ -14,6 +15,7 @@ export default function ResultHero({ type, result }: Props) {
   const { t } = useT()
   const typeName = t(type.name, type.nameEn)
   const tagline = t(type.tagline, type.taglineEn)
+  const symbol = getSymbolForType(type.code)
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 px-4 max-w-2xl mx-auto">
@@ -57,6 +59,11 @@ export default function ResultHero({ type, result }: Props) {
             {typeName}
           </h1>
           <p className="mt-2 text-text-muted italic">「{tagline}」</p>
+          {symbol && (
+            <p className="mt-1 text-sm text-text-muted/60">
+              {symbol.emoji} {t(symbol.name, symbol.nameEn)} · {symbol.element}行属 · {symbol.season}季
+            </p>
+          )}
         </motion.div>
 
         {/* Dimension bars */}

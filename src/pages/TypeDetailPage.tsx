@@ -10,6 +10,7 @@ import TypeAvatar from '../components/common/TypeAvatar'
 import FigureCard from '../components/result/FigureCard'
 import DefiningMoment from '../components/result/DefiningMoment'
 import { figures } from '../data/figures'
+import { getSymbolForType } from '../data/fourSymbols'
 
 export default function TypeDetailPage() {
   const { code } = useParams<{ code: string }>()
@@ -38,6 +39,7 @@ export default function TypeDetailPage() {
   const strengths = tArr(type.strengths, type.strengthsEn)
   const weaknesses = tArr(type.weaknesses, type.weaknessesEn)
   const careers = tArr(type.careers, type.careersEn)
+  const symbol = getSymbolForType(type.code)
 
   const pageTitle = `${type.code} ${typeName} — ${tagline} | MBTI`
   const pageDesc = description.slice(0, 160)
@@ -84,6 +86,11 @@ export default function TypeDetailPage() {
           <p className="mt-3 text-lg text-text-muted italic">
             「{tagline}」
           </p>
+          {symbol && (
+            <p className="mt-2 text-sm text-text-muted/60">
+              {symbol.emoji} {t(symbol.name, symbol.nameEn)} · {symbol.element}行 · {symbol.season}季
+            </p>
+          )}
         </motion.div>
 
         {/* Description */}
